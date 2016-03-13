@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Note 2</title>
-	<style type="text/css">
-	#txt{
-		border: black solid 1px;
-		width:600px;
-		height: 400px;
-		padding: 5px;
-	}
-	p{
-		
-	}
-	</style>
+    <meta charset="utf-8">
+    <title>目录</title>
+    <style type="text/css">
+        div{
+            margin:50px auto;
+            width:300px;
+            border:1px solid red;
+        }
+        div dl dt{
+            background:#808080;
+            color:#2c6857;
+            width: 100px;
+        }
+        div dl dd a{
+            color:#2c6857;
+            width: 100px;
+        }
+
+    </style>
 </head>
+
 <body>
 
-<h3 id="con">2.DOM</h3>
-<div id="txt">
-	<h5>笔记</h5>
-	<p>通过ID获取元素: document.getElementById(“id”) </p>
-	<p>innerHTML 属性: Object.innerHTML</p>
-	<p>改变 HTML 样式: Object.style.property=new style;</p>
-		<li>backgroundColor</li>
-		<li>height</li>
-		<li>width</li>
-		<li>color</li>
-		<li>font</li>
-		<li>fontFamily</li>
-		<li>fontSize</li>
-	<p>显示和隐藏（display属性）: Object.style.display = value</p>
-	<p>控制类名（className 属性）: object.className = classname</p>
-</div>
-<input name="button" type="button" value="改变颜色" onclick="changeColor()" />
-<input name="button" type="button" value="改变宽高" onclick="changeWidthAndHeight()" />
-<input name="button" type="button" value="隐藏内容" onclick="hideText()" />
-<input name="button" type="button" value="显示内容" onclick="showText()" />
-<input name="button" type="button" value="取消设置" onclick="removeChange()" />
-<input name="button" type="button" value="" onclick="" />
-<input name="button" type="button" value="" onclick="" />
-	<script type="text/javascript" src="./function2.js"></script>
+    <script>
+        var arr = new Array();
+        arr = [
+            ['web site',
+                ['#', '百度'],
+                ['#', '谷歌'],
+                ['#', '微博']
+            ],
+            ['web site',
+                ['#', '百度'],
+                ['#', '谷歌'],
+                ['#', '微博']
+            ]
+        ];
 
-</script>
+        var list = "";
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < arr[i].length; j++) {
+                if (j == 0) {
+                    list += '<dt>' + arr[i][0] + '</dt>';
+                } else {
+                    list += '<dd><a href="' + arr[i][j][0] + '" target="_blank">' +j+". " +arr[i][j][1] + '</a></dd>';
+
+                }
+            }
+        }
+        list = '<div class="menu"><dl>' + list + '</dl></div>';
+        document.write(list);
+    </script>
+
+
+
 </body>
 </html>
