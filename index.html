@@ -8,36 +8,70 @@
             margin:0;
         }
         body{
-            background:#d2dfc7;
+            background:#f3f5f6;/*#d2dfc7;*/
         }
-        div{
+        /*菜单*/
+        .menu{
             margin:50px auto;
+            padding:10px 10px;
             width:300px;
-            box-shadow:0 0 30px 5px #66c8f6;
+            box-shadow: 0px 0px 3px 2px #e9ebec;
+            /*box-shadow:3px 3px 30px 5px #fff,0 0 1px 15px white;*/
         }
-        div dl dt{
+        .myMenu{
+            margin-bottom:3px;
+        }
+        /*一级菜单*/
+        .fMenu{
+            display:block;
             margin:0 auto;
             width: 100%;
+            height:40px;
+            line-height:40px;
             text-align:center;
-            background:#4e96b7;
-            color:#2c6857;
+            /*border:1px solid #67a1ff;*/
+            border-radius: 3px;
+            background:#128fdc;/*4d90fe;*/
+            color:white;
+            font-size:19px;
             
         }
-        div dl dd{
-            margin:0;
+        /*二级菜单*/
+        .sMenu{
+            display:none;
             width: 100%;
+            margin:0 auto;
             text-align:center;
-            background:white;
         }
-        div dl dd a{
-            color:#2c6857;
+        .sMenu dd a{
             display:block;
-            height:30px;
+            text-decoration: none;            height:30px;
             line-height:30px;
-            
+            background:#fafafa;/*#4488f8*/
+            color:#7f96a3;
+            border-radius: 3px;
 
         }
+        .myMenu:hover .sMenu{
+             display:block;
+         }
+        /*鼠标移动到一级菜单上时显示二级菜单*/
+        .fMenu:hover{
+            color:white;
+            background:#0063dc;
+            /*border:1px solid #0063dc;*/
+        }
+        .sMenu dd:hover{
 
+        }
+        .sMenu dd a:hover{
+            height:28px;
+            line-height:28px;
+            background:#fafafa;/*#4488f8*/
+            color:#7f96a3;
+            border:1px solid #0063dc;
+
+        }
     </style>
 </head>
 
@@ -52,7 +86,7 @@
                 ['#', '微博']
             ],
             ['web site',
-                ['demo/101/index.html', '简易时钟'],
+                ['demo/101/index.html', '简易电子时钟'],
                 ['#', '谷歌'],
                 ['#', '微博']
             ]
@@ -62,12 +96,14 @@
         for (var i = 0; i < arr.length; i++) {
             for (var j = 0; j < arr[i].length; j++) {
                 if (j == 0) {
-                    list += '<dt>' + arr[i][0] + '</dt>';
+                    list += '<div class="myMenu"><dt class="fMenu">' + arr[i][0] + '</dt><div class="sMenu">';
                 } else {
-                    list += '<dd><a href="' + arr[i][j][0] + '" target="_blank">' +j+". " +arr[i][j][1] + '</a></dd>';
+                    list += '<dd><a href="' + arr[i][j][0] + '" target="_blank">' +j+")  " +arr[i][j][1] + '</a></dd>';
 
                 }
+                
             }
+            list += '</div></div>';
         }
         list = '<div class="menu"><dl>' + list + '</dl></div>';
         document.write(list);
