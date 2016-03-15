@@ -5,6 +5,7 @@ body{
     font-family:'Microsoft YaHei';
     background:#dedede;
 }
+/*头部*//*************************************************/
 header{
     position:relative;
     height:60px;
@@ -33,7 +34,7 @@ header ul li a{
 header ul li a:hover{
     color:#ddd;
 }
-
+/*主体部分*//*************************************************/
 article, sidebar{
     display:block;
     margin:30px;padding:20px;
@@ -92,6 +93,7 @@ article table{
     border-collapse: collapse;/*设置表格的边框被合并为一个单一的边框*/
 }
 article table tr th{
+    color:white;
     background:#333;
 }
 article table tr td{
@@ -100,9 +102,7 @@ article table tr td{
 article table .buttomTable{
     background:#ccc;
 }
-siderbar{
-
-}
+/*侧栏*//*************************************************/
 sidebar h4{
     height:40px;
     line-height:40px;
@@ -110,7 +110,8 @@ sidebar h4{
     border-left:3px solid #ccc;
 }
 sidebar form div{
-    margin:10px 0;
+    font-size: 14px;
+    margin:15px 0;
 }
 
 sidebar form div .tips{
@@ -141,6 +142,7 @@ sidebar .submitButton:hover{
     background: #0063dc;
 
 }
+/*底部*//*wjs************************************************/
 footer{
     width:100%;
     height:50px;
