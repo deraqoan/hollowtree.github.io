@@ -4,73 +4,76 @@
     <meta charset="utf-8">
     <title>目录</title>
     <style type="text/css">
-        *{
-            margin:0;
+        * {
+            margin: 0;
         }
-        body{
-            background:#f3f5f6;/*#d2dfc7;*/
+
+        body {
+            background: #f3f5f6; /*#d2dfc7;*/
         }
         /*菜单*/
-        .menu{
-            margin:50px auto;
-            padding:10px 10px;
-            width:300px;
+        .menu {
+            margin: 50px auto;
+            padding: 10px 10px;
+            width: 300px;
             box-shadow: 0px 0px 3px 2px #e9ebec;
             /*box-shadow:3px 3px 30px 5px #fff,0 0 1px 15px white;*/
         }
-        .myMenu{
-            margin-bottom:3px;
+
+        .myMenu {
+            margin-bottom: 3px;
         }
         /*一级菜单*/
-        .fMenu{
-            display:block;
-            margin:0 auto;
+        .fMenu {
+            display: block;
+            margin: 0 auto;
             width: 100%;
-            height:40px;
-            line-height:40px;
-            text-align:center;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
             /*border:1px solid #67a1ff;*/
             border-radius: 3px;
-            background:#128fdc;/*4d90fe;*/
-            color:white;
-            font-size:19px;
-            
+            background: #128fdc; /*4d90fe;*/
+            color: white;
+            font-size: 19px;
         }
         /*二级菜单*/
-        .sMenu{
-            display:none;
+        .sMenu {
+            display: none;
             width: 100%;
-            margin:0 auto;
-            text-align:center;
+            margin: 0 auto;
+            text-align: center;
         }
-        .sMenu dd a{
-            display:block;
-            text-decoration: none;            height:30px;
-            line-height:30px;
-            background:#fafafa;/*#4488f8*/
-            color:#7f96a3;
-            border-radius: 3px;
 
+            .sMenu dd a {
+                display: block;
+                text-decoration: none;
+                height: 30px;
+                line-height: 30px;
+                background: #fafafa; /*#4488f8*/
+                color: #7f96a3;
+                border-radius: 3px;
+            }
+
+        .myMenu:hover .sMenu {
+            display: block;
         }
-        .myMenu:hover .sMenu{
-             display:block;
-         }
         /*鼠标移动到一级菜单上时显示二级菜单*/
-        .fMenu:hover{
-            color:white;
-            background:#0063dc;
+        .fMenu:hover {
+            color: white;
+            background: #0063dc;
             /*border:1px solid #0063dc;*/
         }
-        .sMenu dd:hover{
 
+        .sMenu dd:hover {
         }
-        .sMenu dd a:hover{
-            height:28px;
-            line-height:28px;
-            background:#fafafa;/*#4488f8*/
-            color:#7f96a3;
-            border:1px solid #0063dc;
 
+        .sMenu dd a:hover {
+            height: 28px;
+            line-height: 28px;
+            background: #fafafa; /*#4488f8*/
+            color: #7f96a3;
+            border: 1px solid #0063dc;
         }
     </style>
 </head>
@@ -98,10 +101,10 @@
                 if (j == 0) {
                     list += '<div class="myMenu"><dt class="fMenu">' + arr[i][0] + '</dt><div class="sMenu">';
                 } else {
-                    list += '<dd><a href="' + arr[i][j][0] + '" target="_blank">' +j+")  " +arr[i][j][1] + '</a></dd>';
+                    list += '<dd><a href="' + arr[i][j][0] + '" target="_blank">' + j + ")  " + arr[i][j][1] + '</a></dd>';
 
                 }
-                
+
             }
             list += '</div></div>';
         }
