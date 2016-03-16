@@ -14,7 +14,7 @@
 	float:left;
 	padding: 20px;
 	border:1px solid #999;
-	width:200px;
+	width:160px;
 }
 .left-box span{
 }
@@ -37,5 +37,5 @@
 }
 .middle-box{
 	border:1px solid #999;
-	margin:0 140px 0 260px;
+	margin:0 140px 0 220px;
 }
