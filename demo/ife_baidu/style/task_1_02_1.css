@@ -19,21 +19,26 @@ header ul{
     position:absolute;top:0;right:10px;
 }
 header ul li {
+    text-align: center;
+
+	width:60px;
     display:block;
     float:left;
     padding:20px 10px;
 }
 header ul li a{
-	display: block;
-	height:60px;width:100px;
+
     text-decoration:none;
     color:white;
     font-size:12px;
 }
-header ul li a:hover{
-    color:#ddd;
-    background: white;
+header ul li:hover{
+	border-bottom: 1px solid red;
+    background: #474747;
+	border-radius: 3px;
+
 }
+
 /*主体部分*//*************************************************/
 article, sidebar{
     display:block;
