@@ -5,7 +5,7 @@
     <title>目录</title>
     <style type="text/css">
         * {
-            margin: 0;
+            margin: 0;padding:0;
         }
 
         body {
@@ -39,7 +39,7 @@
         }
         /*二级菜单*/
         .sMenu {
-            display: none;
+            /*display: none;*//*取消二级菜单的隐藏弹出效果*/
             width: 100%;
             margin: 0 auto;
             text-align: center;
@@ -83,15 +83,18 @@
     <script>
         var arr = new Array();
         arr = [
-            ['web site',
-                ['#', '百度'],
-                ['#', '谷歌'],
-                ['#', '微博']
+            ['单页面制作',
+                ['demo/ife/task_1_01_1.html', 'HTML页面'],
+                ['demo/ife/task_1_02_1.html', 'HTML+CSS页面1'],
+                ['demo/ife/task_1_03_1.html', '三栏式布局'],
+                ['demo/ife/task_1_04_1.html', '定位及居中'],
+                ['demo/ife/task_1_05_1.html', 'HTML+CSS页面2'],
+
             ],
-            ['web site',
-                ['demo/101/index.html', '简易电子时钟'],
-                ['#', '谷歌'],
-                ['#', '微博']
+            ['网页小部件',
+                ['demo/component/101/index.html', '简易电子时钟'],
+                //['#', '谷歌'],
+                //['#', '微博']
             ]
         ];
 
@@ -110,6 +113,9 @@
         }
         list = '<div class="menu"><dl>' + list + '</dl></div>';
         document.write(list);
+
+
+
     </script>
 
 
