@@ -15,29 +15,38 @@ header{
     height:60px;
     background:#333;
 }
-header h1 img{
+header  a{
+    color:white;
+    text-decoration:none;
+    line-height:58px;
+}
+header a img{
+    float:left;
     padding-left:20px;
     height:58px;
 }
+header a h1{
+    display:inline-block;
+    font-size:40px;
+    font-family:Arial;
+    margin-left:10px;
+}
+
 header ul{
     position:absolute;top:0;right:10px;
 }
 header ul li {
     text-align: center;
-
-	width:60px;
+	width:80px;
+    height:60px;
     display:block;
     float:left;
-    padding:20px 10px;
 }
 header ul li a{
-
-    text-decoration:none;
-    color:white;
     font-size:12px;
 }
 header ul li:hover{
-	border-bottom: 1px solid red;
+	border-bottom: 2px solid red;
     background: #474747;
 	border-radius: 3px;
 
@@ -175,4 +184,7 @@ footer{
     text-align:center;
     line-height:50px;
     font-size:14px;
+}
+footer a{
+    color:white;
 }
