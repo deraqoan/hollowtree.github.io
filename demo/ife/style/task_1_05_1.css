@@ -9,6 +9,9 @@ body{
 .clearfix:after{
     content:'';display:table;clear:both;
 }
+.clearfix{
+    *zoom:1;
+}
 /*头部*//*************************************************/
 header{
     position:relative;
