@@ -14,7 +14,8 @@ body
 }
 
 
-/*头部*/
+/*************************************************一、头部***********************************/
+
 .header{
     margin-left:44px;margin-right:44px;
     position:relative;
@@ -50,13 +51,13 @@ body
     width:892px;
     height:2px;
     background:#938e8c;
-    overflow:hidden;
+    overflow:auto;
     border:none;
 }
 
-/*********************************内容上部分************************/
-/***********/
-.top{
+/*************************************************二、内容上部分***********************************/
+
+.page-top{
     position:relative;
     margin:34px 44px;
     
@@ -164,17 +165,225 @@ body
     color:#231815;
     font:12px 'Microsoft YaHei';
     line-height:16px;
-    opacity:0.7;
+    opacity:0.7;                       /*透明度*/
     filter:alpha(opacity=70);
 }
 .wwh-percent{
     color:#cc7680;
     font:16px/21px 'Microsoft YaHei';
 }
-/*********************************内容下部分************************/
-.bottom{
-    margin:74px 44px 0 44px;
+/*************************************************三、内容下部分***********************************/
+
+.page-bottom{
+    position:relative;
+    width:892px;
+
+    margin:74px 44px 40px 44px;
 }
+.article{
+    float:left;
+    width:415px;
+}
+.page-title-front{
+    color:#f5e327;
+    font:bold italic 72px SimHei; 
+}
+.page-title{
+    color:#11456b;
+    font:bold 42px/16px SimHei; 
+}
+.page-subtitle{
+    color:#11456b;
+    font:bold 33px/61px SimHei; 
+}
+.article-line{
+    width:415px;
+    height:2px;
+    margin-bottom:20px;
+    background:#11456b;
+    border:none;
+}
+.childhood:first-letter{/*首字下沉*/
+    color:#f5e327;
+    font:70px 'Microsoft YaHei';
+    float:left;
+    margin-left:3px;
+    margin-right:5px;
+}
+
+.childhood{
+    color:#767777;
+    font:12px/16px SimSun;
+
+}
+.childhood-none{
+    color:#767777;
+    font:12px/16px SimSun;
+    text-indent:2em;
+}
+
+.image4{
+    float:right;top:10px;
+    width:167px;
+    height:288px;
+    left:100px;
+    top:100px;
+    margin:20px 2px 0 20px;
+}
+
+
+/*页面右下部图片*/
+.right-bottom-img{
+    position:relative;
+    float:right;
+    width:458px;
+    height:257px;
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+.img-tips{
+    position:absolute;bottom:0;
+    width:458px;
+    height:61px;
+    background:#767777;
+    opacity:0.4;
+    filter:alpha(opacity=40);
+}
+.img-text{
+    display:block;
+    position:absolute;
+    left:38px;
+    bottom:8px;
+    line-height:44px;
+    padding-left:12px;
+    color:#fff;
+    font:26px 'Microsoft YaHei';
+    border-left:3px solid #72b16a;
+}
+.img-subtext{
+    color:#72b16a;
+    font:bold italic 12px 'Microsoft YaHei';
+    margin-left:8px;
+}
+/*页面右下部文字*/
+
+.right-bottom-text{
+    float:right;
+    position:relative;
+    margin-top:30px;
+    width:458px;
+    height:315px;
+    background:#eeedd6;
+}
+
+.rb-texts{
+    display:block;
+    position:absolute;
+    height:89px;
+    width:370px;
+    margin-top:21px;
+    margin-left:47px;
+}
+.image6{
+    position:absolute;
+    margin-left:-15px;
+    margin-top:15px;
+    left:0;
+    top:3px;
+}
+.rb-text{
+    color:#5a5b5b;
+    font:16px/20px SimSun;
+    line-height:40px;
+}
+.rb-author{
+    text-align:right;
+    color:#5a5b5b;
+    font:italic 12px/20px SimSun;
+}
+
+.rb-sayhello{
+    display:block;
+    position:absolute;
+    margin:171px 21px 53px 275px;
+    color:#5a5b5b;
+    font:italic 14px/16px SimHei;
+}
+.quotation-mark1{
+    float:left;width:10px;
+    margin-left:-40px;
+    color:#d45d5c;
+    font:72px/6px SimHei;
+}
+.quotation-mark2{
+    float:right;width:10px;
+    margin-right:20px;
+    margin-top:30px;
+
+    color:#d45d5c;
+    font:72px/6px SimHei;
+}
+.rb-red-box{
+    position:absolute;
+    bottom:0;
+    width:160px;
+    height:85px;
+    background:#d45d5c;
+    padding:49px 12px 34px 88px;
+}
+.rb-zero{
+    float:left;
+    margin-left:-78px;
+    border-right:2px solid #fff;
+    color:#fff;
+    font:110px 'Microsoft YaHei';
+    line-height:85px;
+}
+.rb-count{
+    color:#fff;
+    font:italic 21px SimHei;
+}
+.rb-hw{
+    color:#fff;
+    font:12px/16px SimHei;
+}
+
+
+
+                /*<p class="rb-text">前端前端前端前端............<span>前端</span></p>
+                <p class="rb-sayhello">‘‘hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world ’’</p>
+                <div class="rb-red-box">
+                    <p class="rb-zero">0</p>
+                    <p class="rb-count">ONE TWO</p>
+                    <p class="rb-count">THREE FORE FOVE</p>
+                    <p class="rb-hw">hello world hello world hello world </p>
+                </div>*/
+
+
+
+
+
+/*************************************************四、底部***********************************/
+.footer{
+    position:relative;
+    margin:40px 44px 59px 44px;
+}
+.footer-line{
+    width:892px;
+    height:1px;
+    background:#938e8c;
+    border:none;
+}
+.footer-link a{
+    display:block;
+    position:absolute;
+    right:0;
+    top:3px;
+    color:#d45d5c;
+    font:12px/14px SimHei;
+    text-decoration:none;
+}
+
 
 
 
