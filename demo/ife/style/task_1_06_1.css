@@ -67,14 +67,33 @@ body
     width:641px;
     height:301px;
 }
-.image2{
+/*.image2{
     position:absolute;
     top:0;left:0;
 }
 .image3{
     position:absolute;
     top:0;right:0;
+}*/
+.front-green-box{
+    position:absolute;
+    top:0;left:0;
+    width:191px;
+    height:301px;
+    background:#428c59;
+    opacity:0.5;               
+    filter:alpha(opacity=50);
 }
+.front-red-box{
+    position:absolute;
+    top:0;right:0;
+    width:191px;
+    height:301px;
+    background:#cc7680;
+    opacity:0.5;               
+    filter:alpha(opacity=50);
+}
+
 /**************/
 .about{
     position:absolute;
@@ -165,7 +184,7 @@ body
     color:#231815;
     font:12px SimSun;
     line-height:16px;
-    opacity:0.7;                       /*透明度*/
+    opacity:0.7;                   
     filter:alpha(opacity=70);
 }
 .three-what{
@@ -243,15 +262,14 @@ body
     float:right;
     width:458px;
     height:257px;
-    opacity:1;
-    filter:alpha(opacity=100);
+   
 }
 .img-tips{
     position:absolute;bottom:0;
     width:458px;
     height:61px;
     background:#767777;
-    opacity:0.4;
+    opacity:0.4;                /*透明度*/
     filter:alpha(opacity=40);
 }
 .img-text{
@@ -352,21 +370,6 @@ body
     color:#fff;
     font:12px/16px SimHei;
 }
-
-
-
-                /*<p class="rb-text">前端前端前端前端............<span>前端</span></p>
-                <p class="rb-sayhello">‘‘hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world ’’</p>
-                <div class="rb-red-box">
-                    <p class="rb-zero">0</p>
-                    <p class="rb-count">ONE TWO</p>
-                    <p class="rb-count">THREE FORE FOVE</p>
-                    <p class="rb-hw">hello world hello world hello world </p>
-                </div>*/
-
-
-
-
 
 /*************************************************四、底部***********************************/
 .footer{
