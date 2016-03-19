@@ -1,9 +1,4 @@
-﻿.clearfix:after{
-    content:'';display:table;clear:both;
-}
-.clearfix{
-    *zoom:1;
-}
+﻿
 *{
     margin:0;padding:0;
 }
@@ -12,8 +7,12 @@ body
     width:980px;
     margin:0 auto;
 }
-
-
+.clearfix:after{
+    content:'';display:table;clear:both;
+}
+.clearfix{
+    *zoom:1;
+}
 /*************************************************一、头部***********************************/
 
 .header{
@@ -230,8 +229,7 @@ body
     color:#f5e327;
     font:70px 'Microsoft YaHei';
     float:left;
-    margin-left:3px;
-    margin-right:5px;
+    margin:0 5px 0 3px;
 }
 
 .childhood{
