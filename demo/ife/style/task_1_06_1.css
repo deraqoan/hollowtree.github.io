@@ -109,10 +109,9 @@ body
 .about-upper{
     color:#000;
     font:24px 'Microsoft YaHei';
-
-  text-decoration: underline;
-  font-variant: small-caps;
-  line-height: 1.25;
+    text-decoration: underline;
+    font-variant: small-caps;
+    line-height: 1.25;
 
 
 }
@@ -328,23 +327,26 @@ body
 .rb-sayhello{
     display:block;
     position:absolute;
-    margin:171px 21px 53px 275px;
+    margin:171px 21px auto 275px;
     color:#5a5b5b;
     font:italic 14px/16px SimHei;
 }
 .quotation-mark1{
-    float:left;width:10px;
-    margin-left:-40px;
-    color:#d45d5c;
+    /*float: left;*/
+    position: relative;
+    top:36px;left: -36px;
+    margin: 36px -36px 0 0;
     font:72px/6px SimHei;
-}
-.quotation-mark2{
-    float:right;width:10px;
-    margin-right:20px;
-    margin-top:30px;
+    color:#d45d5c;
 
-    color:#d45d5c;
+}
+
+.quotation-mark2{
+    float: right;
+    right: 0px;
+    margin: 36px -36px 0 0;
     font:72px/6px SimHei;
+    color:#d45d5c;
 }
 .rb-red-box{
     position:absolute;
