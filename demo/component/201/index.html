@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>绘制七巧板</title>
+</head>
+<body>
+    <canvas id="canvas" style="border:1px solid #aaa; display: block; margin: 50px auto;"></canvas>
+
+    <script type="text/javascript">
+        var tangram = [
+        { p: [{ x: 0, y: 0 }, { x: 400, y: 0 }, { x: 200, y: 200 }], color: "#7f67cf" },
+        { p: [{ x: 0, y: 0 }, { x: 200, y: 200 }, { x: 0, y: 400 }], color: "#67becf" },
+        { p: [{ x: 400, y: 0 }, { x: 400, y: 200 }, { x: 300, y: 100 }], color: "#fad" },
+        /*orange引号不能丢，这里color都是一个字符串*/
+        { p: [{ x: 300, y: 100 }, { x: 400, y: 200 }, { x: 300, y: 300 }, { x: 200, y: 200 }], color: "#c967cf" },
+        { p: [{ x: 200, y: 200 }, { x: 300, y: 300 }, { x: 100, y: 300 }], color: "#6788cf" },
+        { p: [{ x: 300, y: 300 }, { x: 100, y: 300 }, { x: 0, y: 400 }, { x: 200, y: 400 }], color: "#67cf8d" },
+        { p: [{ x: 200, y: 400 }, { x: 400, y: 200 }, { x: 400, y: 400 }], color: "#cf8c67" },
+        ];
+        window.onload = function () {
+            var canvas = document.getElementById("canvas");
+            canvas.width = 400;
+            canvas.height = 400;
+            if (canvas.getContext("2d")) {
+                var context = canvas.getContext("2d");
+                for (var i = 0; i < tangram.length; i++)
+                    draw(tangram[i], context);
+            } else {
+                alert('当前浏览器不支持Canvas，请更换浏览器后再试。');
+            }
+            
+        };
+
+        function draw(piece, cxt) {
+            cxt.beginPath();
+            cxt.moveTo(piece.p[0].x, piece.p[0].y);
+            for (var i = 1; i < piece.p.length; i++)
+                cxt.lineTo(piece.p[i].x, piece.p[i].y);
+            cxt.closePath();
+            /*绘制七巧板*/
+            cxt.fillStyle = piece.color;
+            cxt.fill();
+            /*绘制边框*/
+            cxt.lineWidth = 3;
+            cxt.strokeStyle = "#cfcb67";
+            cxt.stroke();
+        }
+
+    </script>
+</body>
+</html>
