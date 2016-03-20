@@ -34,7 +34,11 @@ header a h1{
     font-family:Arial;
     margin-left:10px;
 }
-
+@media only screen and (max-width:700px){
+    header  a img, header  a h1{
+        display:none;
+    }
+}
 header ul{
     position:absolute;top:0;right:10px;
 }
@@ -127,6 +131,7 @@ article table .buttomTable{
     background:#ccc;
 }
 /*侧栏*//*************************************************/
+
 sidebar{
     position:fixed;top:60px;right:0px;
     display:block;
@@ -177,7 +182,14 @@ sidebar .submitButton:hover{
     background: #0063dc;
 
 }
-
+@media only screen and (max-width:800px){
+    sidebar{
+        display:none;
+    }
+    article{
+        margin-right:30px;
+    }
+}
 /*底部*//*hollowtree************************************************/
 footer{
     width:100%;
