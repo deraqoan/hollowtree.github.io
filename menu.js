@@ -7,7 +7,7 @@ var arr = new Array();
                 ['demo/ife/task_1_04_1.html', '定位及居中'],
                 ['demo/ife/task_1_05_1.html', 'HTML+CSS页面2'],
                 ['demo/ife/task_1_06_1.html', '模拟报纸排版'],
-                ['demo/ife/task_1_07_1.html', '常见的页面架构及样式布局'],
+                // ['demo/ife/task_1_07_1.html', '常见的页面架构及样式布局'],
 
             ],
             ['网页小部件',
