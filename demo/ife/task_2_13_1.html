@@ -21,18 +21,23 @@
   获取aqi-input输入的值，并显示在aqi-display中
   */
         window.onload = function () {
+            //获取各个表单的数据
             var btn = document.getElementById("button");
-            //var num = document.getElementById("aqi-input");
+            var num = document.getElementById("aqi-input");
             var disNum = document.getElementById("aqi-display");
 
-            //btn.onclick = function () {
-            //    disNum.innerHTML = num.value;//输入框也可以有一个属性值是value
-            //}
-
-            var num = document.getElementById("aqi-input").value;
+            //判断是否有输入并进行处理
             btn.onclick = function () {
-                disNum.innerHTML = num;
+                if (num.value) {
+                    disNum.innerHTML = num.value;//输入框也可以有一个属性值是value
+                } else {
+                    disNum.innerHTML = "您尚未输入！"
+                    disNum.style.color = "red";
+
+                }
             }
+
+            
         }
 
 
