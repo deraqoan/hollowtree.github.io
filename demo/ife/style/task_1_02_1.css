@@ -40,7 +40,7 @@ header ul li:hover{
 }
 
 /*主体部分*//*************************************************/
-article, sidebar{
+article, aside{
     display:block;
     margin:30px;padding:20px;
     background:white;
@@ -108,35 +108,35 @@ article table .buttomTable{
     background:#ccc;
 }
 /*侧栏*//*************************************************/
-sidebar h4{
+aside h4{
     height:40px;
     line-height:40px;
     padding-left:10px;
     border-left:3px solid #ccc;
 }
-sidebar form div{
+aside form div{
     font-size: 14px;
     margin:15px 0;
 }
 
-sidebar form div .tips{
+aside form div .tips{
     float:left;           /*添加后个人描述四个字才和文本域上对齐*/
     text-align:right;
     width:35%;
     padding-right:15px;
 }
-sidebar form div p{
+aside form div p{
     margin-left:35%;
     padding-left:15px;
     font-size:12px;
     color: #aaa;
 }
-sidebar textarea{
+aside textarea{
     width:50%;
     height:100px;
 
 }
-sidebar .submitButton{
+aside .submitButton{
     width:100%;
     height:40px;
     border-radius: 10px;
@@ -145,7 +145,7 @@ sidebar .submitButton{
     font-size: 19px;
     border:none;
 }
-sidebar .submitButton:hover{
+aside .submitButton:hover{
     background: #0063dc;
 
 }
