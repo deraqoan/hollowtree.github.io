@@ -36,12 +36,12 @@ body{
 
 .page-title{
     position:relative;
-    height:7rem;
+    height:6rem;
     background-color:#91d4da;
 }
 .page-title a{
     position:absolute;
-    font:2rem/7rem 'Microsoft YaHei';
+    font:2rem/6rem 'Microsoft YaHei';
     color:#fff;
     text-decoration:none;
     left:3%;
@@ -50,7 +50,7 @@ body{
 
 }
 .page-title h1{
-    font:3rem/7rem 'Microsoft YaHei';
+    font:3rem/6rem 'Microsoft YaHei';
     text-align:center;
     color:#fff;
 
