@@ -1,4 +1,4 @@
-*{
+html, body, div, p, span{
 	margin:0;padding: 0;
 }
 .clearfix:after{
@@ -44,8 +44,12 @@
 	background:#dfdfdf;
 
 }
-.middle-box{
+.center-box{
 	border:1px solid #999;
 	margin:0 140px 0 220px;
 	background: white;
+}
+
+.center-box p{
+    margin:20px 50px;
 }

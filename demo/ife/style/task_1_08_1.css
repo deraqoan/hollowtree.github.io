@@ -1,0 +1,65 @@
+body{
+    margin:0;
+    padding:40px;
+}
+
+div{
+    float:left;
+    box-sizing:border-box;
+    height:80px;
+    background-color:#eee;
+    margin:0 10px 10px 0;
+    border:2px solid #333;
+}
+
+
+@media screen and (min-width:768px){
+    .num{
+        color:red;
+    }
+    .num-zero{
+        display:none;
+    }
+    .box1{
+        width:calc(8.333333% - 10px);            /*calc的计算表达式的计算符号‘+’、‘-’前后一定要有空格，‘*’、‘/’建议有空格*/
+    }
+    .box2{
+        width:calc(16.666666% - 10px);
+    }
+    .box3{
+        width:calc(25% - 10px);
+    }
+    .box4{
+        width:calc(33.333333% - 10px);
+    }
+    .box6{
+        width:calc(50% - 10px);
+    }
+    
+
+}
+
+@media screen and (max-width:768px){
+    .num{
+        display:none;
+    }
+    .num-zero{
+        color:red;
+    }
+    .box02{
+        width:calc(16.666666% - 10px);
+    }
+    .box03{
+        width:calc(25% - 10px);
+    }
+    .box06{
+        width:calc(50% - 10px);
+    }
+    .box08{
+        width:calc(66.666666% - 10px);
+    }
+    .box12{
+        width:calc(100% - 10px);
+    }
+
+}

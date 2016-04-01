@@ -45,6 +45,7 @@ header{
 }
 .search input:focus{
     border: none;
+
 }
 header a{
     position:absolute;
