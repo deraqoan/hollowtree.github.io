@@ -63,7 +63,7 @@ nav ul li{
     width:20%;
     /*padding:0 3.75rem;*/
     border-bottom:0.5rem solid #fff;
-
+    list-style-type:none;
 }
 nav ul li a{
     font:2.5rem/6rem 'Microsoft YaHei';
