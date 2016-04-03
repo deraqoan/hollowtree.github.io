@@ -162,7 +162,7 @@ main img{
 
 .module h2{
     color:#626262;
-    font:3rem/7.5rem 'Microsoft YaHei';
+    font:3rem/5rem 'Microsoft YaHei';
     border-bottom:4px solid #e0e0e0;
     margin-bottom:2rem;
 }
@@ -253,6 +253,6 @@ main img{
 
 /*µ×²¿*/
 footer{
-    height:9rem;
+    height:7rem;
     background-color:#f8f8f8;
 }

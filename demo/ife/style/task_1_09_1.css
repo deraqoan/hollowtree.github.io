@@ -1,4 +1,4 @@
-.clearfix:after{
+﻿.clearfix:after{
     content:'';display:table;clear:both;
 }
 .clearfix{
@@ -8,6 +8,8 @@ body{
     width: 1280px;
     min-height:1266px;
     margin: 0 auto;
+    font-family: "Microsoft YaHei";
+
 }
 header{
     position:relative;
@@ -131,6 +133,31 @@ main>section{
     background-color: #ededec;
     padding:0 64px;
 }
+.my-form{
+    height:85px;
+    border:1px solid #ccc;
+    background-color:#fff;
+}
+.my-form div{
+    float:left;
+    margin:20px;
+}
+.my-form div p{
+    margin:5px;
+}
+.form-search{
+    width: 51px;
+    height: 26px;
+    border:none;
+    border-radius:3px;
+    color:#fff;
+    background-color:#388ac1;
+}
+.form-search:hover{
+    background-color:#2c7fb6;
+
+}
+
 
 
 .count div{
@@ -157,28 +184,56 @@ main>section{
     border-left:4px solid #e2cd46;
 }
 
+.first-left, .first-right, .calendar, .ranking-list{
+    float:left;
+    height:356px;
+    background-color:#fff;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+.main-content h3{
+    line-height:40px;
+    background-color:#f4f5f6;
+    border-bottom:1px solid #ccc;
 
-
+}
 .first-left{
     width:532px;
-    height:356px;
     float:left;
-    background-color:#fff;
-    margin-top:10px;
-    margin-bottom:10px;
 
 }
 .first-right{
     width:351px;
-    height:356px;
     float:right;
-    background-color:#fff;
-    margin-top:10px;
 
 }
 .calendar{
     width:351px;
-    height:356px;
-    background-color:#fff;
     clear:left;
+}
+.ranking-list{
+    width:532px;
+    float:right;
+
+}
+.calendar td{
+    width:40px;
+    height:40px;
+
+}
+.calendar td p{
+
+}
+
+
+
+
+
+.ranking-list th, .ranking-list td{
+    height:24px;
+    border:1px solid #cbcbcb;
+}
+.ranking-list td:nth-child(1){
+    width:66px;
 }

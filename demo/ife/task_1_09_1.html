@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>H09 | 一个复杂页面</title>
+    <link rel="stylesheet" type="text/css" href="style/reset.css">
     <link rel="stylesheet" type="text/css" href="style/task_1_09_1.css">
 </head>
 
@@ -12,7 +13,7 @@
         <img src="image/task_1_09_1.png" class="site-logo" alt="logo">
         <form method="get" action="search.php" class="search">
             <img src="image/task_1_09_2.png" />
-            <input type="search" name="search"></input>
+            <input type="search" name="search" />
         </form>
         <a href="">登录</a>
     </header>
@@ -39,7 +40,6 @@
                         <dt class="second-menu">文件二</dt>
                         <dd class="third-menu">文档1</dd>
                         <dd class="third-menu">文档2</dd>
-
                     </dl>
                     <dl>
                         <dt class="second-menu">文件三</dt>
@@ -60,11 +60,60 @@
                 <span>文件一</span>
                 <span>文档一</span>
             </p>
-            <form>
-                <div></div>
-                <div></div>
-                <div></div>
-                <input type="button" value="查询">
+            <form class="my-form">
+                <div>
+                    <label >查询项</label>
+                    <select>
+                        <option value="">第一项</option>
+                        <option value="">第二项</option>
+                        <option value="">第三项</option>
+                    </select>
+                </div>
+                <div>
+                    <p>
+                        <label>买方</label>
+                        <select>
+                            <option value="" selected>小A</option>
+                            <option value="">小B</option>
+                            <option value="">小C</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>卖方</label>
+                        <select>
+                            <option value="">小A</option>
+                            <option value="">小B</option>
+                            <option value="" selected>小C</option>
+                        </select>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <label>日期</label>
+                        <input type="date" />
+                        <label>总耗时</label>
+                        <select>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value="" selected>8天</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>人数</label>
+                        <select>
+                            <option value=""></option>
+                            <option value="">5人</option>
+                            <option value="" selected>10人</option>
+                        </select>
+                        <label>成交项</label>
+                        <select>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value="">10项</option>
+                        </select>
+                    </p>
+                </div>
+                <input type="submit" value="搜索" class="form-search">
             </form>
             <div>
             </div>
@@ -77,16 +126,142 @@
             </div>
 
             <section class="first-left">
-
+                <h3>第一组项目</h3>
             </section>
             <section class="first-right">
+                <h3>第一组项目</h3>
 
             </section>
             <section class="calendar">
-
+                <h3>日历</h3>
+                <form>
+                    <select>
+                        <option>2016年</option>
+                    </select>
+                    <select>
+                        <option>2016年</option>
+                    </select>
+                    <select>
+                        <option>2016年</option>
+                    </select>
+                    <input type="button" value="返回今天"/>
+                </form>
+                <table>
+                    <tr>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                        <th>七</th>
+                    </tr>
+                    <tr>
+                        <td><p></p><p></p></td>
+                        <td><p></p><p></p></td>
+                        <td><p></p><p></p></td>
+                        <td><p></p><p></p></td>
+                        <td><p>1</p><p>愚人节</p></td>
+                        <td><p>2</p><p>廿五</p></td>
+                        <td><p>3</p><p>廿六</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>4</p><p>廿七</p></td>
+                        <td><p>5</p><p>清明</p></td>
+                        <td><p>6</p><p>廿九</p></td>
+                        <td><p>7</p><p>三月</p></td>
+                        <td><p>8</p><p>初二</p></td>
+                        <td><p>9</p><p>初三</p></td>
+                        <td><p>10</p><p>初四</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>11</p><p></p></td>
+                        <td><p>12</p><p></p></td>
+                        <td><p>13</p><p></p></td>
+                        <td><p>14</p><p></p></td>
+                        <td><p>15</p><p></p></td>
+                        <td><p>16</p><p></p></td>
+                        <td><p>17</p><p></p></td>
+                    </tr>
+                    <tr>
+                        <td><p>18</p><p></p></td>
+                        <td><p>19</p><p></p></td>
+                        <td><p>20</p><p></p></td>
+                        <td><p>21</p><p></p></td>
+                        <td><p>22</p><p></p></td>
+                        <td><p>23</p><p></p></td>
+                        <td><p>24</p><p></p></td>
+                    </tr>
+                    <tr>
+                        <td><p>25</p><p></p></td>
+                        <td><p>26</p><p></p></td>
+                        <td><p>27</p><p></p></td>
+                        <td><p>28</p><p></p></td>
+                        <td><p>29</p><p></p></td>
+                        <td><p>30</p><p></p></td>
+                        <td><p></p><p></p></td>
+                    </tr>
+                </table>
             </section>
             <section class="ranking-list">
-
+                <h3>汽车行业品牌榜</h3>
+                <table>
+                    <tr>
+                        <th>排名</th>
+                        <th>品牌</th>
+                        <th>搜索指数</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>大众</td>
+                        <td>48912001</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>丰田</td>
+                        <td>29307333</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>奥迪</td>
+                        <td>23139070</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>本田</td>
+                        <td>22885564</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>福特</td>
+                        <td>22324792</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>宝马</td>
+                        <td>21444077</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>现代</td>
+                        <td>20114969</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>起亚</td>
+                        <td>19251680</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>奔驰</td>
+                        <td>19172837</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>别克</td>
+                        <td>18544027</td>
+                    </tr>
+                </table>
             </section>
         </section>
     </main>
