@@ -233,6 +233,7 @@ main>section{
 .ranking-list th, .ranking-list td{
     height:24px;
     border:1px solid #cbcbcb;
+    line-height:24px;
 }
 .ranking-list td:nth-child(1){
     width:66px;

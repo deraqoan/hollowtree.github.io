@@ -35,8 +35,19 @@
  * 返回一个数组，格式见函数中示例
  */
 function getData() {
-
-
+    var listSource = document.getElementById("source");
+    var cityList = listSource.getElementsByTagName("li");
+    var lengthLi = cityList.length;
+    var numList =  listSource.getElementsByTagName("b");
+    var myData = new Array(lengthLi);
+    for (var i = 0; i < lengthLi; i++) {
+        myData[i] = new Array();
+        var myCity = cityList[i].childNodes[0].nodeValue;
+        var myNum = numList[i].childNodes[0].nodeValue;
+        myData[i][0] = myCity.slice(0, myCity.length - 5);
+        myData[i][1] = parseInt(myNum);
+        return myData;
+    }
   /*
   coding here
   */
@@ -48,11 +59,11 @@ function getData() {
     ……
   ]
   */
-
-  return data;
+  //return data;
 
 }
-
+var mo = getData();
+document.write(mo);
 /**
  * sortAqiData
  * 按空气质量对data进行从小到大的排序
