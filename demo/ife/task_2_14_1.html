@@ -52,7 +52,7 @@
             *  afterend    作为后一个同辈元素插入  *
             *************************************/
             var myList = document.getElementById("aqi-list");
-            var bigNum = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "零"]
+            var bigNum = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "零"];
             for (var i = 0; i < aqiData.length; i++) {
                 if (aqiData[i][1] >= 60) {
                     myList.insertAdjacentHTML("beforeend", "<li>第" + bigNum[i] + "名：" + aqiData[i][0] + " " + aqiData[i][1] + "</li>");
