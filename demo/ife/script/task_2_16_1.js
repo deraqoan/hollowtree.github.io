@@ -16,14 +16,31 @@ function addAqiData() {
     var btn = document.getElementById("add-btn");
     var cityName = document.getElementById("aqi-city-input").value;
     var airValue = document.getElementById("aqi-value-input").value;
-    aqiData.cityName = airValue;
+    aqiData[cityName] = airValue;
 }
 
 /**
  * 渲染aqi-table表格
  */
 function renderAqiList() {
+    var myTable = document.getElementById("aqi-table").getElementsByTagName("tbody")[0];
+    var dtdThr = document.createElement("td");
+    for (cityName in aqiData) {
+        var definition = aqiData[cityName];
+        var dtr = document.createElement("tr");
+        var dtdOne = document.createElement("td");
+        var dtdTwo = document.createElement("td");
 
+        var dtdTextOne = document.createTextNode(cityName);
+        dtdOne.appendChild(dtdTextOne);
+        dtr.appendChild(dtdOne);
+        var dtdTextTwo = document.createTextNode(aqiData[cityName]);
+        dtdTwo.appendChild(dtdTextTwo);
+        dtr.appendChild(dtdTwo);
+        dtr.appendChild(dtdThr);
+        dtdThr.innerHTML = '<button>删除</button>';
+    }
+    myTable.appendChild(dtr);
 }
 
 /**
@@ -41,16 +58,21 @@ function addBtnHandle() {
  */
 function delBtnHandle() {
     // do sth.
-
+    alert("9");
     renderAqiList();
 }
 
-function init() {
+
+ function init() {
 
     // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
-
+    var addBtn = document.getElementById("add-btn");
+    addBtn.onclick = addBtnHandle;
     // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
-
+    var delBtn = document.getElementById("aqi-table").getElementsByTagName("button");
+    for (var i = 0; i < delBtn.length; i++) {
+        delBtn[i].onclick = delBtnHandle;
+    }
 }
 
 init();

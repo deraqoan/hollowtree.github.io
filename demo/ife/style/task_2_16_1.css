@@ -1,0 +1,26 @@
+body{
+    max-width:1000px;
+    margin:50px auto;
+}
+div{
+    float:left;
+}
+table{
+    float:right;
+}
+
+td{
+    font:12px/25px 'Microsoft YaHei';
+    text-align:center;
+    border:2px solid #aaa;
+}
+td:nth-child(1){
+    width:100px;
+}
+td:nth-child(2){
+    width:100px;
+
+}
+td:nth-child(3){
+    width:100px;
+}
