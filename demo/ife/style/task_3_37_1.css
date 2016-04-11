@@ -1,5 +1,6 @@
 body{
     min-height:2000px;
+    font-size:16px;
 }
 header{
     height:50px;
@@ -9,13 +10,18 @@ header{
 p{
     width:70%;
     margin:1em auto;
-    font:24px/40px 'Microsoft YaHei';
+    font:1.5rem/2.5rem 'Microsoft YaHei';
 }
 #signin-link a{
+    display:inline-block;
+    text-align:center;
+    width:3em;
     color:#fff;
-    font:24px/50px 'Microsoft YaHei';
-
+    font:1.5rem/3.125rem 'Microsoft YaHei';
     text-decoration:none;
+}
+#signin-link a:hover{
+    background-color:#0AAF88;
 }
 
 #background-box{
@@ -29,7 +35,7 @@ p{
     width:300px;
     height:200px;
     background-color:#fff;
-    position:absolute;
+    position:fixed;
     top:50%;
     left:50%;
     -webkit-transform:translate(-50%,-50%);
@@ -46,7 +52,7 @@ p{
 #close-btn{
     position:absolute;
     top:6px;
-    right:6px;;
+    right:1em;
     width:28px;
     height:28px;
     line-height:28px;
