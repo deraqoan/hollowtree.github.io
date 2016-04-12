@@ -12,7 +12,7 @@ p{
     margin:1em auto;
     font:1.5rem/2.5rem 'Microsoft YaHei';
 }
-#signin-link a{
+.signin-link a{
     display:inline-block;
     text-align:center;
     width:3em;
@@ -20,22 +20,23 @@ p{
     font:1.5rem/3.125rem 'Microsoft YaHei';
     text-decoration:none;
 }
-#signin-link a:hover{
+.signin-link a:hover{
     background-color:#0AAF88;
 }
 
-#background-box{
+.mask{
     width:100%;
     background-image:linear-gradient(to right,rgba(100,0,100,0.2),rgba(300,200,200,0.5));
     position:fixed;
     top:0;
 }
-#login-box{
+.login-box{
     border:2px solid #99f;
     width:300px;
     height:200px;
     background-color:#fff;
     position:fixed;
+    z-index:100000;
     top:50%;
     left:50%;
     -webkit-transform:translate(-50%,-50%);
@@ -49,7 +50,7 @@ p{
     font:20px/40px SimHei;
     text-indent:1em;
 }
-#close-btn{
+.close-btn{
     position:absolute;
     top:6px;
     right:1em;
