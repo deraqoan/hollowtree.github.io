@@ -23,11 +23,11 @@ p{
 .signin-link a:hover{
     background-color:#0AAF88;
 }
-
 .mask{
     width:100%;
     background-image:linear-gradient(to right,rgba(100,0,100,0.2),rgba(300,200,200,0.5));
     position:fixed;
+    z-index:1000;
     top:0;
 }
 .login-box{
@@ -36,17 +36,16 @@ p{
     height:200px;
     background-color:#fff;
     position:fixed;
-    z-index:100000;
-    top:50%;
-    left:50%;
-    -webkit-transform:translate(-50%,-50%);
-    transform:translate(-50%,-50%);
+    z-index:2000;
 }
-.sign-header{
+.login-box-header{
     height:40px;
     border-bottom:1px solid #999;
 }
-.sign-header h1{
+.login-box-header:hover{
+    cursor:move;
+}
+.login-box-header h1{
     font:20px/40px SimHei;
     text-indent:1em;
 }
@@ -58,14 +57,49 @@ p{
     height:28px;
     line-height:28px;
 }
-.signin-box{
-    width:300px;
+.login-content{
     box-sizing:border-box;
-    padding:0 40px;
+    padding:0 15%;
 }
-.signin-box input{
+.login-content input{
     width:100%;
     height:30px;
     margin:5px 0;
 
 }
+
+
+
+.resizable-right{
+    position:absolute;
+    top:0;
+    right:0;
+    width:2px;
+    height:calc(100% - 10px);
+    background-color:#99f;
+    cursor:e-resize;
+    margin-right:-2px;
+}
+.resizable-bottom{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:calc(100% - 10px);
+    height:2px;
+    background-color:#99f;
+    cursor:s-resize;
+    margin-bottom:-2px;
+}
+.resizable-right-bottom{
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:2px;
+    height:2px;
+    background-color:green;
+    cursor:se-resize;
+    margin-right:-2px;
+    margin-bottom:-2px;
+
+}
+
