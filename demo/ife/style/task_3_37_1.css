@@ -68,8 +68,6 @@ p{
 
 }
 
-
-
 .resizable-right{
     position:absolute;
     top:0;
@@ -94,12 +92,10 @@ p{
     position:absolute;
     bottom:0;
     right:0;
-    width:2px;
-    height:2px;
-    background-color:green;
+    width:10px;
+    height:10px;
+    background-image:url(../image/task_3_37_1.png);
     cursor:se-resize;
     margin-right:-2px;
     margin-bottom:-2px;
-
 }
-

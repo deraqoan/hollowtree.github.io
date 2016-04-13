@@ -1,6 +1,6 @@
-//      ┌ ┬ ┐
-//      ├ ┼ ┤│─
-//      └ ┴ ┘ 
+// ┌ ┬ ┐
+// ├ ┼ ┤│─
+// └ ┴ ┘ 
 
 // ┌─  loginLink
 // ├─  mask
@@ -13,6 +13,16 @@
 function g(el) { return document.getElementById(el); }
 
 //*******************************************************************
+//点击半透明遮罩和关闭按钮时，使半透明遮罩和登陆框不可见
+g("mask").onclick = g("closeBtn").onclick = function () {
+    g("mask").style.display = "none";
+    g("loginBox").style.display = "none";
+}
+//点击页面标题栏“登录”链接时，使半透明遮罩和登陆框可见
+g("loginLink").onclick = function () {
+    g("mask").style.display = "block";
+    g("loginBox").style.display = "block";
+}
 
 //函数: 自动居中
 function autoCenter(el) {
@@ -27,8 +37,8 @@ function autoCenter(el) {
 }
 //函数: 自动全屏
 function fillToBody(el) {
-    el.style.width = document.documentElement.clientWidth + 'px';
-    el.style.height = document.documentElement.clientHeight + 'px';
+    el.style.width = document.documentElement.clientWidth + "px";
+    el.style.height = document.documentElement.clientHeight + "px";
 }
 
 var mouseOffsetX = 0;
@@ -37,7 +47,9 @@ var isDraging = false;
 
 g("loginBoxHeader").addEventListener('mousedown', function (e) {
     var e = e || window.event;
+    //鼠标点击点离浮出层左边框的距离
     mouseOffsetX = e.pageX - g("loginBox").offsetLeft;
+    //鼠标点击点离浮出层上边框的距离
     mouseOffsetY = e.pageY - g("loginBox").offsetTop;
     isDraging = true;
 })
@@ -46,17 +58,22 @@ document.onmousemove = function (e) {
     var e = e || window.event;
     mouseX = e.pageX;
     mouseY = e.pageY;
-
+    
     var moveX = 0;
     var moveY = 0;
 
     if (isDraging === true) {
+
         moveX = mouseX - mouseOffsetX;
         moveY = mouseY - mouseOffsetY;
 
+        //获取页面宽高度
+        //document.documentElement.clientWidth 和 document.body.clientWidth 是不一样的 !
         var pageWidth = document.documentElement.clientWidth;
         var pageHeight = document.documentElement.clientHeight;
 
+        //获取浮出层的宽高度
+        //offsetWidth 和 clientWidth 是不一样的 !
         var loginBoxWidth = g("loginBox").offsetWidth;
         var loginBoxHeight = g("loginBox").offsetHeight;
 
@@ -64,6 +81,7 @@ document.onmousemove = function (e) {
         var maxMoveY = pageHeight - loginBoxHeight;
 
         //moveX = moveX > 0 ? moveX : 0;
+        //moveX = moveX < maxMoveX ? moveX : maxMoveX;
         moveX = Math.min(maxMoveX, Math.max(0, moveX));
         moveY = Math.min(maxMoveY, Math.max(0, moveY));
         g("loginBox").style.left = moveX + "px";
@@ -71,40 +89,11 @@ document.onmousemove = function (e) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//点击半透明遮罩和关闭按钮时，使半透明遮罩和登陆框不可见
-g("mask").onclick = g("closeBtn").onclick = function () {
-    mask.style.display = "none";
-    loginBox.style.display = "none";
- }
-//点击页面标题栏“登录”链接时，使半透明遮罩和登陆框可见
-g("loginLink").onclick = function () {
-    mask.style.display = "block";
-    loginBox.style.display = "block";
-}
-
-
-//***********************************************************************************************************************
 var mousePanel, mouseCtrl, mouseType;
-//var moving = 0, mouseStartX = 0, mouseStartY = 0, mouseX = 0, mouseY = 0;
 var moving = 0, mouseStartX = 0, mouseStartY = 0;
 function onMouseDown(e, panel, ctrl, type) {
-    var e = e || window.event;
-    //alert(ctrl.offsetLeft);
+    var  e = e || window.event;
+
     mouseStartX = e.pageX - ctrl.offsetLeft;
     mouseStartY = e.pageY - ctrl.offsetTop;
 
@@ -117,19 +106,19 @@ function onMouseDown(e, panel, ctrl, type) {
 
 function onMove() {
     if (moving) {
-        var minLeft = mousePanel.offsetLeft;
-        var minTop = mousePanel.offsetTop;
-
         var toX = mouseX - mouseStartX;
         var toY = mouseY - mouseStartY;
+        //限定浮出层最大宽高度
+        var maxToX = document.documentElement.clientWidth - mousePanel.offsetLeft - 10;
+        var maxToY = document.documentElement.clientHeight - mousePanel.offsetTop - 10;
 
-        toX = Math.max(toX, 300);
-        toY = Math.max(toY, 200);
-        //console.log(mouseCtrl.style.left);
+        toX = Math.min(maxToX,Math.max(toX, 300));
+        toY = Math.min(maxToY,Math.max(toY, 200));
+
         switch (mouseType) {
             case "r":
                 mouseCtrl.style.left = toX + "px";
-                mousePanel.style.width = toX  + "px";
+                mousePanel.style.width = toX + "px";
                 break;
             case "b":
                 mouseCtrl.style.top = toY + "px";
@@ -137,16 +126,14 @@ function onMove() {
                 break;
             case "rb":
                 console.log(mouseCtrl.style.left);
-                mouseCtrl.style.left = toX  + "px";
-                mouseCtrl.style.top = toY + "px";
-                mousePanel.style.width = toX  + "px";
+                mouseCtrl.style.left = toX-8 + "px";
+                mouseCtrl.style.top = toY-8 + "px";
+                mousePanel.style.width = toX + "px";
                 mousePanel.style.height = toY + "px";
                 break;
         }
     }
 }
-
-
 
 document.onmouseup = function () {
     isDraging = false;
@@ -160,8 +147,8 @@ document.onmouseup = function () {
     }
 }
 
-function resizable(panelId) {
-    var panel = g(panelId);
+function resizable(el) {
+    var panel = el;
     var rightBox = document.createElement("div");
     var bottomBox = document.createElement("div");
     var rightBottomBox = document.createElement("div");
@@ -184,8 +171,10 @@ function resizable(panelId) {
     })
 }
 
+//*******************************************************************************
+
 window.onload = window.onresize = function () {
     autoCenter(g("loginBox"));
     fillToBody(g("mask"));
-    resizable("loginBox");
+    resizable(g("loginBox"));
 }
