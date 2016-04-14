@@ -97,10 +97,10 @@ function buildTable(tableData) {
     }
     var tableTr = new Array();
     var tableTd = new Array();
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < tableData.length; i++) {
         tableTr[i] = document.createElement("tr");
         tableTd[i] = new Array();
-        for (var j = 0; j < 5; j++) {
+        for (var j = 0; j < tableData[i].length; j++) {
             tableTd[i][j] = document.createElement("td");
             tableTd[i][j].appendChild(document.createTextNode(tableData[i][j]));
             tableTr[i].appendChild(tableTd[i][j]);
