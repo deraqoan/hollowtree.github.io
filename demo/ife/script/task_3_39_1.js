@@ -23,6 +23,8 @@ function buildData(num) {
     tableData = new Array()
     if (num == undefined) {
         num = 10;
+    } else if (num > 10000) {
+        num = 10000;
     }
     var name = ["小明", "小红", "小亮", "小明", "小刚", "小绿", "小紫", "小伟", "小虎", "豆豆"]
     for (var i = 0; i < num; i++) {
@@ -80,8 +82,7 @@ function tableHeaderStyle() {
 
     //表格上边框与浏览器可见区域上边框的距离
     var tableToY = myTable.offsetTop - document.body.scrollTop;
-
-    if (tableToY > 0 || document.body.scrollTop > (myTable.offsetTop + myTableH)) {
+    if (tableToY > tableHeaderH || document.body.scrollTop > (myTable.offsetTop + myTableH)) {
          tableHeader.style.marginTop = -tableHeaderH + 1 + "px";
 
      } else if (tableToY <= tableHeaderH) {

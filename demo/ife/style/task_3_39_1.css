@@ -43,19 +43,24 @@ tr:nth-child(1){
 tr:nth-child(2n+1){
     background-color:#f6f6ff;
 }
-th{
+th, td{
 
     border:1px solid #ccc;
     width:100px;
-    font:20px/30px 'Microsoft YaHei';
     text-align:center;
+
+}
+th{
+    font:20px/30px 'Microsoft YaHei';
     background-color:#eee;
 
 }
 td{
 
-    border:1px solid #ccc;
-    width:100px;
-    font:18px/30px 'Microsoft YaHei';
-    text-align:center;
+    font:16px/30px 'Microsoft YaHei';
+
+}
+td:hover{
+    background-color:#dfdfef;
+    cursor:pointer;
 }
