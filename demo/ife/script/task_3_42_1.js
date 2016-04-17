@@ -36,7 +36,7 @@ function buildTable() {
     tableHead.id = "myTableHead";
     var week = ["日", "一", "二", "三", "四", "五", "六"];
     var tableTr = document.createElement("tr");
-
+    //日历头部
     for (var i = 0; i < 7; i++) {
         var tableTh = document.createElement("th");
         var tableThText = document.createTextNode(week[i]);
@@ -45,7 +45,7 @@ function buildTable() {
     }
     tableHead.appendChild(tableTr);
     myTable.appendChild(tableHead);
-    
+    //日历主体
     var tableBody = document.createElement("tbody");
     tableBody.id = "myTableBody";
     for (var j = 0; j < 6; j++) {
@@ -119,7 +119,7 @@ function refreshTable() {
     }
 }
 
-//点击日历主体选取日期时刷新页面头部 "xxxx年xx月xx日" 字样
+//点击日历主体选取日期时刷新页面头部 "xxxx年xx月xx日" 字样, 同时给日历着色
 function showDate() {
     var flag = 0;
     var myChoose = g("myChoose").value;
@@ -127,6 +127,7 @@ function showDate() {
         var disYear = parseInt(g("disYear").value);
         var disMonth = parseInt(g("disMonth").value) + 1;
         disMonth = disMonth < 10 ? "0" + disMonth : disMonth;
+        //如果点击处不是空白则执行以下动作
         if (event.target.firstChild) {
              
                 var tableTds = document.getElementsByTagName("td");
@@ -150,6 +151,8 @@ function showDate() {
         if (g("myChoose").value == true) { dyeTable(); }
     }
 }
+
+//当选择时间段时,给两个时间点之间的部分着色
 function dyeTable() {
     var tableTds = document.getElementsByTagName("td");
     var num = 0;
