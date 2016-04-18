@@ -1,26 +1,28 @@
 body{
     max-width:1000px;
     margin:50px auto;
+    font-family:Microsoft YaHei;
 }
 div{
     float:left;
 }
+p{
+    margin:10px 0;
+}
 table{
     float:right;
 }
-
-td{
-    font:12px/25px 'Microsoft YaHei';
+th, td{
+    width:100px;
+    line-height:25px;
     text-align:center;
     border:2px solid #aaa;
 }
-td:nth-child(1){
-    width:100px;
+th{
+    font-size:15px;
 }
-td:nth-child(2){
-    width:100px;
+td{
+    font-size:12px;
 
 }
-td:nth-child(3){
-    width:100px;
-}
+
