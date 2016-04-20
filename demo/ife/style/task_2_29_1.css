@@ -1,0 +1,36 @@
+body{
+    margin:100px 300px;
+    font-family:'Microsoft YaHei';
+}
+.text-box{
+    width:250px;
+    height:40px;
+    border:2px solid #ddd;
+    margin-left:15px;
+    border-radius:4px;
+    padding:0;
+    box-sizing:border-box;
+    outline:none;
+    text-indent:1em;
+    font-family:'Microsoft YaHei';
+
+}
+.check-btn{
+    width:80px;
+    height:35px;
+    border:none;
+    padding:0;
+    background-color:#128fdc;
+    font:20px/35px ;
+    color:#fff;
+    border-radius:4px;
+}
+.check-btn:hover{
+    background-color:#0063dc;
+}
+.tip{
+    margin-left:50px;
+    font-size:14px;
+    line-height:18px;
+    color:#bbb;
+}
