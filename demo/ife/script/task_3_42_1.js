@@ -97,6 +97,7 @@ function buildDate() {
     for (var i = 0; i < tableTds.length; i++) {
         if (tableTds[i].firstChild) {
             tableTds[i].removeChild(tableTds[i].firstChild);
+            tableTds[i].style.backgroundColor = "";
         }
     }
     //重写日历
@@ -138,14 +139,15 @@ function showDate() {
                         tableTds[i].style.backgroundColor = "cornflowerblue";
                     } else {
                         tableTds[i].style.backgroundColor = "";
-
                     }
                 }
                 event.target.style.backgroundColor = "cornflowerblue";
             
             var disDate = event.target.firstChild.nodeValue;
             disDate = disDate < 10 ? "0" + disDate : disDate;
-            g("myText").value = disYear + "年" + disMonth + "月" + disDate + "日";
+            if (g("myChoose").value == true) {
+                g("myText").value = disYear + "年" + disMonth + "月" + disDate + "日";
+            }
             flag = event.target.firstChild.nodeValue;
         }
         if (g("myChoose").value == true) { dyeTable(); }
