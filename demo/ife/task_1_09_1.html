@@ -10,7 +10,8 @@
 
 <body>
     <header role="banner">
-        <img src="image/task_1_09_1.png" class="site-logo" alt="logo">
+        <!--<img src="" class="site-logo" alt="logo">-->
+        <div class="site-logo" alt="logo"></div>
         <form method="get" action="search.php" class="search">
             <img src="image/task_1_09_2.png" />
             <input type="search" name="search" />
@@ -21,7 +22,7 @@
         <aside>
             <div class="user-info">
                 <div class="user-name">
-                    <img src="" alt="user-logo" />
+                    <img src="image/task_1_09_1.png" alt="user-logo" class="user-logo" />
                     <p>ABC123</p>
                 </div>
                 <div class="user-follow clearfix">
@@ -30,27 +31,26 @@
                 </div>
             </div>
             
-            <dl>
-                <dt class="first-menu">个人报表</dt>  <!--260 191-->
-                <dd>
+            <ul>
+                <li class="first-menu first-menu-active"><a href="" class="icon-table2"> 个人报表</a>
                     <dl>
-                        <dt class="second-menu">文件一</dt>
+                        <dt class="second-menu"><a href="" class="icon-folder-minus"> 文件一</a></dt>
                     </dl>
                     <dl>
-                        <dt class="second-menu">文件二</dt>
-                        <dd class="third-menu">文档1</dd>
-                        <dd class="third-menu">文档2</dd>
+                        <dt class="second-menu"><a href="" class="icon-folder-minus"> 文件二</a></dt>
+                        <dd class="third-menu"><a href="" class="icon-file-text2"> 文档1</a></dd>
+                        <dd class="third-menu"><a href="" class="icon-file-text2"> 文档2</a></dd>
                     </dl>
                     <dl>
-                        <dt class="second-menu">文件三</dt>
+                        <dt class="second-menu"><a href="" class="icon-folder-minus"> 文件三</a></dt>
                     </dl>
-                </dd>
-                <dt class="first-menu">个人收藏</dt>
-                <dt class="first-menu">我的分享</dt>
-                <dt class="first-menu">图库</dt>
-                <dt class="first-menu">成长记录</dt>
-                <dt class="first-menu">账户信息</dt>
-            </dl>
+                </li>
+                <li class="first-menu"><a href="" class="icon-star-full"> 个人收藏</a></li>
+                <li class="first-menu"><a href="" class="icon-share2"> 我的分享</a></li>
+                <li class="first-menu"><a href="" class="icon-file-picture"> 图库</a></li>
+                <li class="first-menu"><a href="" class="icon-accessibility"> 成长记录</a></li>
+                <li class="first-menu"><a href="" class="icon-clipboard"> 账户信息</a></li>
+            </ul>
         </aside>
             
         <section class="main-content">
@@ -60,10 +60,10 @@
                 <span>文件一</span>
                 <span>文档一</span>
             </p>
-            <form class="my-form">
+            <form class="my-form clearfix">
                 <div>
                     <label >查询项</label>
-                    <select>
+                    <select class="my-form-1">
                         <option value="">第一项</option>
                         <option value="">第二项</option>
                         <option value="">第三项</option>
@@ -72,7 +72,7 @@
                 <div>
                     <p>
                         <label>买方</label>
-                        <select>
+                        <select class="my-form-2">
                             <option value="" selected>小A</option>
                             <option value="">小B</option>
                             <option value="">小C</option>
@@ -80,7 +80,7 @@
                     </p>
                     <p>
                         <label>卖方</label>
-                        <select>
+                        <select class="my-form-2">
                             <option value="">小A</option>
                             <option value="">小B</option>
                             <option value="" selected>小C</option>
@@ -90,63 +90,103 @@
                 <div>
                     <p>
                         <label>日期</label>
-                        <input type="date" />
+                        <input type="date"  class="my-form-3" />
                         <label>总耗时</label>
-                        <select>
-                            <option value=""></option>
-                            <option value=""></option>
+                        <select  class="my-form-4">
+                            <option value="">6天</option>
+                            <option value="">7天</option>
                             <option value="" selected>8天</option>
                         </select>
                     </p>
                     <p>
                         <label>人数</label>
-                        <select>
-                            <option value=""></option>
+                        <select class="my-form-5">
+                            <option value="">2人</option>
                             <option value="">5人</option>
                             <option value="" selected>10人</option>
                         </select>
                         <label>成交项</label>
-                        <select>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value="">10项</option>
+                        <select class="my-form-6">
+                            <option value="">2项</option>
+                            <option value="">5项</option>
+                            <option value="" selected>10项</option>
                         </select>
                     </p>
                 </div>
-                <input type="submit" value="搜索" class="form-search">
+                <input type="submit" value="搜索" class="my-form-search">
             </form>
-            <div>
+            <div class="time-select clearfix">
+                <div></div>
+                <div class="time-show"><p>10:00 am</p><p>￥<span>1200</span></p></div>
+                <div class="time-show"><p>11:00 am</p><p>￥<span>1300</span></p></div>
+                <div class="time-show"><p>12:00 am</p><p>￥<span>1200</span></p></div>
+                <div class="time-show"><p>01:00 pm</p><p>￥<span>1400</span></p></div>
+                <div class="time-show"><p>02:00 pm</p><p>￥<span>1500</span></p></div>
+                <div class="time-show"><p>03:00 pm</p><p>￥<span>1800</span></p></div>
+                <div></div>
+                <div>历史查询</div>
+
+                
+
             </div>
             <div class="count clearfix">
-                <p>2016年4月份统计</p>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <h4>2016年4月份统计</h4>
+                <div><p>133311</p><p>成交量</p><div class="count-block"></div></div>
+                <div><p>133311</p><p>成交量</p><div class="count-block"></div></div>
+                <div><p>133311</p><p>成交量</p><div class="count-block"></div></div>
+                <div><p>133311</p><p>成交量</p><div class="count-block"></div></div>
             </div>
 
             <section class="first-left">
                 <h3>第一组项目</h3>
+                
+                <div>
+                    <ul class="clearfix">
+                        <li>项目一</li>
+                        <li>项目二</li>
+                        <li>项目三</li>
+                        <li>项目四</li>
+                        <li>项目五</li>
+                    </ul>
+                    <table>
+                        <tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+                        <tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+                        <tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+                        <tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+                        <tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+                        <tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+                    </table>
+                </div>
             </section>
             <section class="first-right">
                 <h3>第一组项目</h3>
+                <div>
+                    <div>
+                        <p>标题</p>
+                        <p>项目报表三</p>
+                    </div>
+                    <div>
 
+                    </div>
+                    <div></div>
+
+                </div>
             </section>
             <section class="calendar">
                 <h3>日历</h3>
                 <form>
-                    <select name="year" id="year">
+                    <select name="year" id="year" class="calendar-year">
                         <option>2016年</option>
                     </select>
-                    <select name="month" id="month">
+                    <select name="month" id="month" class="calendar-month">
                         <option>4月</option>
                     </select>
-                    <select name="date" id="date">
+                    <select name="date" id="date" class="calendar-date">
                         <option>8日</option>
                     </select>
-                    <input type="button" value="返回今天" id="back-to-today" />
+                    <input type="button" value="返回今天" id="back-to-today"  class="calendar-btn" />
                 </form>
-                <<!--div>
+                <!--div>
                     <ul>
                         <li>2016年</li>
                         <li></li>
