@@ -12,11 +12,11 @@
     <header role="banner">
         <!--<img src="" class="site-logo" alt="logo">-->
         <div class="site-logo" alt="logo"></div>
+        <a href="" class="login-btn icon-user">登录</a>
         <form method="get" action="search.php" class="search">
-            <img src="image/task_1_09_2.png" />
+            <i class="icon-search"></i>
             <input type="search" name="search" />
         </form>
-        <a href="">登录</a>
     </header>
     <main role="main">
         <aside>
@@ -54,7 +54,7 @@
         </aside>
             
         <section class="main-content">
-            <p>
+            <p class="main-content-nav">
                 <span>C站</span>
                 <span>个人报表</span>
                 <span>文件一</span>
@@ -116,25 +116,25 @@
                 <input type="submit" value="搜索" class="my-form-search">
             </form>
             <div class="time-select clearfix">
-                <div></div>
-                <div class="time-show"><p>10:00 am</p><p>￥<span>1200</span></p></div>
-                <div class="time-show"><p>11:00 am</p><p>￥<span>1300</span></p></div>
-                <div class="time-show"><p>12:00 am</p><p>￥<span>1200</span></p></div>
-                <div class="time-show"><p>01:00 pm</p><p>￥<span>1400</span></p></div>
-                <div class="time-show"><p>02:00 pm</p><p>￥<span>1500</span></p></div>
-                <div class="time-show"><p>03:00 pm</p><p>￥<span>1800</span></p></div>
-                <div></div>
-                <div>历史查询</div>
+                <div class="time-left"><i class="icon-previous2"></i></div>
+                <div class="time-show"><p class="time-option">10:00 am</p><p class="time-money">￥<span>1200</span></p></div>
+                <div class="time-show"><p class="time-option">11:00 am</p><p class="time-money">￥<span>1300</span></p></div>
+                <div class="time-show"><p class="time-option">12:00 am</p><p class="time-money">￥<span>1200</span></p></div>
+                <div class="time-show"><p class="time-option">01:00 pm</p><p class="time-money">￥<span>1400</span></p></div>
+                <div class="time-show"><p class="time-option">02:00 pm</p><p class="time-money">￥<span>1500</span></p></div>
+                <div class="time-show"><p class="time-option">03:00 pm</p><p class="time-money">￥<span>1800</span></p></div>
+                <div class="time-right"><i class="icon-next2"></i></div>
+                <div class="time-search icon-calendar"><span> 历史查询</span></div>
 
                 
 
             </div>
             <div class="count clearfix">
-                <h4>2016年4月份统计</h4>
-                <div><p>133311</p><p>成交量</p><div class="count-block"></div></div>
-                <div><p>133311</p><p>成交量</p><div class="count-block"></div></div>
-                <div><p>133311</p><p>成交量</p><div class="count-block"></div></div>
-                <div><p>133311</p><p>成交量</p><div class="count-block"></div></div>
+                <h4 class="count-title">2016年4月份统计</h4>
+                <div class="big-count-box"><p class="count-num">133311</p><p class="count-text">成交量</p><div class="count-box count-box1"></div></div>
+                <div class="big-count-box"><p class="count-num">133311</p><p class="count-text">成交量</p><div class="count-box count-box2"></div></div>
+                <div class="big-count-box"><p class="count-num">133311</p><p class="count-text">成交量</p><div class="count-box count-box3"></div></div>
+                <div class="big-count-box"><p class="count-num">133311</p><p class="count-text">成交量</p><div class="count-box count-box4"></div></div>
             </div>
 
             <section class="first-left">
@@ -160,16 +160,26 @@
             </section>
             <section class="first-right">
                 <h3>第一组项目</h3>
-                <div>
-                    <div>
-                        <p>标题</p>
-                        <p>项目报表三</p>
-                    </div>
-                    <div>
-
-                    </div>
-                    <div></div>
-
+                <div class="fg-big-box">
+                        <div class="fg-title">
+                            <p class="fg-small-title">标题</p>
+                            <p class="fg-big-title">项目报表三</p>
+                        </div>
+                        <div class="fg-title clearfix">
+                            <div class="fg-price">
+                                <p class="fg-small-title">价格</p>
+                                <p class="fg-big-title">￥158</p>
+                            </div>
+                            <div class="fg-person">
+                                <p class="fg-small-title">负责人</p>
+                                <p class="fg-big-title">小A</p>
+                            </div>
+                        </div>
+                        <div class="fg-describe">
+                            <p class="fg-small-title">详细描述</p>
+                            <p class="fg-big-title">该项目目前负责人是……</p>
+                        </div>
+                    <p><label class="fg-small-title"><input type="checkbox" />遵守保密协议</label><input type="button" value="搜索" class="fg-secret-btn" /></p>
                 </div>
             </section>
             <section class="calendar">

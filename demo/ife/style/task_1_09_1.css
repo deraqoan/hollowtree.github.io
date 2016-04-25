@@ -52,10 +52,28 @@ header{
     height:36px;
     background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGRjMzNUVBMzNDMjA2ODExODIyQUExOTk2MkZBRkVFRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFQkVEODYwQkY2NkQxMUU1QjU1QjgwOTVDMjFFMkMyNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFQkVEODYwQUY2NkQxMUU1QjU1QjgwOTVDMjFFMkMyNSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkYzMzVFQTMzQzIwNjgxMTgyMkFBMTk5NjJGQUZFRUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkYzMzVFQTMzQzIwNjgxMTgyMkFBMTk5NjJGQUZFRUQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6rxqStAAAAgklEQVR42mL8//9/MwMDgw3D4AAdLEBCB4gdBomDFjAxDDIw6qBRB406aNRBow4addCog4a7g1ioZM4vIL5GBXPeUctBz4DYcDQNDWUHvQfi/2Tg+NEoG3XQqINGHTTqoFEHjTqIyoDx////ZkBakkJzvgHxbiS+FxCzkmHOOYAAAwC1hh3NNpP2qAAAAABJRU5ErkJggg==");
 }
+.icon-user:before {
+    content: "\e90a";
+    width:25px;
+    display:inline-block;
+    text-align:center;
+}
+.login-btn{
+    /*position:absolute;*/
+    float:right;
+    color: #fff;
+    font: 12px/56px HeiTi;
+    width:60px;
+    margin-right:60px;
+    text-decoration: none;
+}
+.login-btn:hover{
+    color:#eee;
+}
+
 .search{
-    position: absolute;
-    left:810px;
-    top:13px;
+    float:right;
+    margin:14px 10px;
     width: 313px;
     height: 28px;
     background-color: #fff;
@@ -80,27 +98,14 @@ header{
     border:none;
     margin-top: 0;
     box-sizing: border-box;;
-
+    outline:none;
 }
 .search input:focus{
     border: none;
-
-}
-header a{
-    position:absolute;
-    top:22px;
-    right: 93px;
-    color: #fff;
-    font: 12px/16px HeiTi;
-    text-decoration: none;
-    background-image: url(../image/task_1_09_3.png);
-    background-position:  -4px -49px;
-    background-repeat:no-repeat;
-    padding-left: 20px;
-    vertical-align: middle;
 }
 
 
+/****************侧边栏*/
 aside{
     width: 260px;
     height: 1210px;
@@ -108,7 +113,6 @@ aside{
     background-color: #2b2e3d;
     color:#6e8095;
     font:12px SimHei;
-    
 }
 
 .user-info{
@@ -150,11 +154,14 @@ aside{
 .icon-folder-minus:before {
     content: "\e902";
 }
-.icon-calendar:before {
-    content: "\e904";
-}
+
+
 .icon-search:before {
     content: "\e905";
+    float:left;
+    font-size:17px;
+    margin:6px 0 0 10px;
+    color:#ccc;
 }
 .icon-accessibility:before {
     content: "\e906";
@@ -235,19 +242,31 @@ aside{
 
 
 
-
 main>section{
     width:1020px;
+    height:1210px;
     box-sizing:border-box;
     float: right;
     background-color: #ededec;
     padding:0 64px;
 }
-
+.main-content-nav{
+    font:12px/22px SimHei;
+    color:#444;
+    background-color:#fff;
+    position:absolute;
+    text-indent:2em;
+    width:1020px;
+    margin-left:-63px;
+}
+.main-content-nav span:nth-child(n+2):before{
+    content:"/";
+}
 .my-form{
     height:85px;
     border:1px solid #ccc;
     background-color:#fff;
+    margin-top:35px;
     display:flex;
     flex-direction:row;
     align-items:center;
@@ -302,17 +321,89 @@ main>section{
 }
 .time-select{
     margin:10px 0;
-    border:1px solid #d8d9db;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+.icon-previous2:before {
+    content: "\e90b";
+    font:16px;
+    line-height:65px;
+    display:block;
+    width:100%;
+    text-align:center;
+    color:#ababab;
+}
+.icon-next2:before {
+    content: "\e90c";
+    font:16px;
+    line-height:65px;
+    display:block;
+    width:100%;
+    text-align:center;
+    color:#ababab;
+   
+
+}
+.icon-calendar span{
+    display:block;
+    font:12px/65px 'Microsoft YaHei';
+
+}
+.icon-calendar:before {
+    content: "\e904";
+    display:block;
+    width:40px;
+    height:40px;
+    font-size:40px;
+    line-height:65px;
+    float:left;
+    margin-left:15px;
+    color:#388bc2;
+    margin-right:5px;
 }
 .time-select div{
     float:left;
     margin:0 4px;
+    height:65px;
+    background-color:#fff;
+    box-sizing:border-box;
+}
+.time-left{
+    width:30px;
 }
 .time-show{
     width:110px;
-    background-color:#fff;
-    height:65px;
+    border-top:5px solid #fff;
 }
+.time-show:nth-child(2){
+    border-top:5px solid #4388c9;
+
+}
+.time-show:hover{
+    border-top:5px solid #4388c9;
+
+}
+.time-option{
+    font:12px/20px 'Microsoft YaHei';
+    text-align:center;
+}
+.time-money{
+    font:12px 'Microsoft YaHei';
+    text-align:center;
+    color:#ccc;
+}
+.time-money span{
+    font:21px 'Microsoft YaHei';
+    color:#ec6500;
+}
+.time-right{
+    width:30px;
+}
+.time-search{
+    width:130px;
+}
+
 
 .first-left{
 
@@ -353,10 +444,49 @@ main>section{
     border:1px solid #e8e9e9;
     text-align:center;
 }
+.first-left td:hover{
+    background-color:#f4f5f6;
+}
 
+.fg-big-box{
+    padding:15px 45px 45px 45px;
+}
+.fg-small-title{
+    color:#ccc;
+    font:12px/16px 'Microsoft YaHei';
+}
+.fg-big-title{
+    font:12px/16px 'Microsoft YaHei';
 
-
-
+}
+.fg-title{
+    padding:3px 0;
+    border-bottom:1px solid #ddd;
+}
+.fg-price, .fg-person{
+    float:left;
+}
+.fg-price {
+    width:40%;
+    border-right:1px solid #ddd;
+}
+.fg-person{
+    padding-left:5px;
+}
+.fg-describe{
+    height:150px;
+}
+.fg-secret-btn{
+    width:50px;
+    height:23px;
+    border:none;
+    background-color:#388ac1;
+    color:#fff;
+    float:right;
+}
+.fg-secret-btn:hover{
+    background-color:#0f3762;
+}
 
 
 
@@ -364,7 +494,11 @@ main>section{
 .count{
     margin:20px 0;
 }
-.count>div{
+.count-title{
+    font:12px/18px 'Microsoft YaHei';
+    color:#323333;
+}
+.big-count-box{
     width: 201px;
     height: 71px;
     border:1px solid #d8d9db;
@@ -373,20 +507,54 @@ main>section{
     box-sizing:border-box;
     background-color:#fff;
     border-radius:3px;
+    position:relative;
 }
-.count div:nth-child(2){
+.big-count-box:nth-child(2){
     margin-left: 0;
     border-left:4px solid #43b29e;
 }
-.count div:nth-child(3){
+.big-count-box:nth-child(3){
     border-left:4px solid #388ac1;
 }
-.count div:nth-child(4){
+.big-count-box:nth-child(4){
     border-left:4px solid #cf4a36;
 }
-.count div:nth-child(5){
+.big-count-box:nth-child(5){
     border-left:4px solid #e2cd46;
 }
+.count-num{
+    font:12px/20px SimHei;
+    color:#323333;
+    text-indent:10px;
+    margin-top:12px;
+}
+.count-text{
+    font:10px/20px SimHei;
+    color:#aaa;
+    text-indent:10px;
+}
+.count-box{
+    width:60px;
+    height:45px;
+    background-color:red;
+    position:absolute;
+    top:12px;
+    right:12px;
+}
+.count-box1{
+    background-color:#43b29e;
+}
+.count-box2{
+    background-color:#388ac1;
+}
+.count-box3{
+    background-color:#cf4a36;
+}
+.count-box4{
+    background-color:#e2cd46;
+}
+
+
 
 .first-left, .first-right, .calendar, .ranking-list{
     float:left;
@@ -473,6 +641,11 @@ main>section{
     width:40px;
     height:30px;
     padding:5px 0;
+    box-sizing:border-box;
+    border:1px solid #fff;
+}
+.calendar td:hover{
+    background-color:#f4f5f6;
 }
 .calendar td p{
     font:11px/15px SimHei;
@@ -492,7 +665,9 @@ main>section{
     margin:17px auto;
     font:12px SimHei;
 }
-
+.ranking-list tr:hover{
+    background-color:#f4f5f6;
+}
 .ranking-list th, .ranking-list td{
     height:24px;
     border:1px solid #cbcbcb;
