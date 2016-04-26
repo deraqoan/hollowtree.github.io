@@ -11,6 +11,7 @@ arr = [
         ['demo/ife/task_1_05_1.html', 'HTML+CSS页面Ⅱ'],
         ['demo/ife/task_1_11_1.html', '移动Web页面'],
         ['demo/ife/task_1_06_1.html', '模拟报纸排版'],
+        ['demo/ife/task_1_09_1.html', '一个复杂页面'],
 
     ],
     ['网页小部件',
@@ -19,6 +20,7 @@ arr = [
         ['demo/ife/task_3_37_1.html', '浮出层'],
         ['demo/ife/task_3_38_1.html', '排序表格'],
         ['demo/ife/task_3_39_1.html', '首行冻结的表格'],
+        ['demo/algorithms/sort-bubble.html', '排序算法可视化'],
         ['demo/ife/task_3_40_1.html', '日历组件Ⅰ'],
         ['demo/ife/task_3_41_1.html', '日历组件Ⅱ'],
         ['demo/ife/task_3_42_1.html', '日历组件Ⅲ'],
@@ -26,7 +28,6 @@ arr = [
 
         //['',''],
         //['#', '谷歌'],
-        //['#', '微博'],
     ]
 ];
 

@@ -36,7 +36,9 @@ g("aqi-value-input").onblur = function () {
 function addAqiData() {
     var cityInput = g("aqi-city-input").value.trim();
     var valueInput = g("aqi-value-input").value.trim();
-
+    if (g("tip1").innerHTML != "OK!" || g("tip2").innerHTML != "OK!") {
+        return;
+    }
     if (cityInput && valueInput) {
         aqiData[cityInput] = valueInput;
     }
