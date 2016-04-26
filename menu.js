@@ -20,7 +20,7 @@ arr = [
         ['demo/ife/task_3_37_1.html', '浮出层'],
         ['demo/ife/task_3_38_1.html', '排序表格'],
         ['demo/ife/task_3_39_1.html', '首行冻结的表格'],
-        ['demo/algorithms/sort-bubble.html', '排序算法可视化'],
+        ['demo/algorithms/sort-bubble.html', '冒泡排序可视化'],
         ['demo/ife/task_3_40_1.html', '日历组件Ⅰ'],
         ['demo/ife/task_3_41_1.html', '日历组件Ⅱ'],
         ['demo/ife/task_3_42_1.html', '日历组件Ⅲ'],
