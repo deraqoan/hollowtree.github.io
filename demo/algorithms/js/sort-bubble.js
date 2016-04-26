@@ -10,25 +10,46 @@ function buildData() {
     }
 }
 //Generator函数!!!
+//function* sortData(){
+//    var myArr=data;
+//    var flag=0;
+//    for(var j=0;j<myArr.length;j++){
+//        var a=0; 
+//        for(var i=0;i<myArr.length-flag;i++){
+                
+//            if(myArr[i]>myArr[i+1]){
+//                var temp=myArr[i];
+//                myArr[i]=myArr[i+1];
+//                myArr[i+1]=temp;
+//                //yield语句
+//                yield myArr;
+//                a++;
+//            }
+//        }
+//        if(a==0)break;
+//        flag++;
+//    }
+//    return "ending";
+//}
+
 function* sortData(){
     var myArr=data;
-    var flag=0;
-    for(var j=0;j<myArr.length;j++){
-        for(var i=0;i<myArr.length-flag;i++){
-                
+    for(var j=myArr.length-1;j>=0;j--){
+        var flag=0;
+        for(var i=0;i<j;i++){
             if(myArr[i]>myArr[i+1]){
                 var temp=myArr[i];
                 myArr[i]=myArr[i+1];
                 myArr[i+1]=temp;
                 //yield语句
                 yield myArr;
+                flag = 1;
             }
         }
-        flag++;
+        if(flag==0) break;
     }
     return "ending";
 }
-
 //可视化数据
 function showData(arr){
     var showBox = document.getElementById("showBox");
