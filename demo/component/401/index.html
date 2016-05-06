@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>幻灯片切换</title>
+        <style type="text/css">
+            img{
+                display:block;
+            }
+            .show-box{
+                width:1180px;
+                height:98px;
+                margin:100px auto;
+                border:3px solid #000;
+                position:relative;
+            }
+            .content-box{
+                position:absolute;
+                margin-top:0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="showBox" class="show-box">
+            <div id="contentBox" class="content-box">
+                <img src="1.png" alt="行胜于言" />
+                <img src="2.png" alt="明厨亮灶" />
+                <img src="3.png" alt="网购大家评" />
+                <img src="4.png" alt="慧眼识银" />
+            </div>
+        </div>
+        <script type="text/javascript">
+            function $(id) {
+                return document.getElementById(id);
+            }
+            var i = 0;
+            var flag = false;
+            var timeout = 20;
+            function slide() {
+                console.log(flag+" " +i);
+
+                //var contentBox = document.getElementById("contentBox").style.marginTop;
+                if (i == 0 || i == -3 * 98) {
+                    flag = !flag;
+                }
+                if (flag) {
+                    i = i - 2;
+                } else {
+                    i = i + 2*3;
+                }
+                $("contentBox").style.marginTop = i + "px";
+                if(i==0 || i % 98==0){
+                    timeout = 2000;
+                } else {
+                    timeout = 20;
+
+                }
+                setTimeout(slide, timeout);
+
+            }
+            setTimeout(slide, timeout);
+        </script>
+    </body>
+</html>
