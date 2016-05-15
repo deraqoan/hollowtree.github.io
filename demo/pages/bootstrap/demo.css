@@ -1,0 +1,27 @@
+body{
+    background: #dedede;
+}
+header{
+    background-color:#333;
+    padding:0 20px;
+}
+article, aside{
+    padding:20px;
+    margin:20px;
+    box-shadow: 1px 1px 5px 1px #848484;
+    background-color:#fff;
+}
+
+.bow-sea{
+    margin:5px;
+    padding:5px;
+    display:block;
+    float:left;
+    box-sizing:border-box;
+    border: 1px solid #ccc;
+}
+footer{
+    height:50px;
+    line-height:50px;
+    background-color:#000;
+}
