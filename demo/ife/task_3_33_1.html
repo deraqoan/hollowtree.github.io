@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>听指令的小方块</title>
+    <style>
+        svg{
+            float:left;
+        }
+        div{
+            width:300px;
+            height:180px;
+            float:left;
+        }
+        a{
+            display:inline-block;
+            width:60px;
+            height:60px;
+            background-color:rgb(87, 115, 224);
+            font:40px/60px SimHei;
+            text-align:center;
+            cursor:pointer;
+            position:relative;
+            overflow:hidden;
+        }
+        a span{
+            width:60px;
+            height:120px;
+            display:inline-block;
+            position:absolute;
+            font:20px/60px SimHei;
+            z-index:2;
+            background-image:linear-gradient(rgba(87, 165, 224,1) 50%,rgba(255,255,255,0) 50%);
+            left:0;
+            transform-origin:center right;
+            transform:rotate(90deg);
+            transition:transform .5s ease-in-out .1s;
+        }
+        a span:hover{
+            transform:rotate(0deg);
+        }
+        input:hover{
+            opacity:0.8;
+        }
+        p{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" preserveAspectRadio="xMidYMid meet">
+        <rect x="0" y="0" width="400" height="400" style="stroke:#000;fill:#fff;"></rect>
+
+        <line x1="0" y1="40" x2="400" y2="40" style="stroke:#000"></line>
+        <line x1="0" y1="80" x2="400" y2="80" style="stroke:#000"></line>
+        <line x1="0" y1="120" x2="400" y2="120" style="stroke:#000"></line>
+        <line x1="0" y1="160" x2="400" y2="160" style="stroke:#000"></line>
+        <line x1="0" y1="200" x2="400" y2="200" style="stroke:#000"></line>
+        <line x1="0" y1="240" x2="400" y2="240" style="stroke:#000"></line>
+        <line x1="0" y1="280" x2="400" y2="280" style="stroke:#000"></line>
+        <line x1="0" y1="320" x2="400" y2="320" style="stroke:#000"></line>
+        <line x1="0" y1="360" x2="400" y2="360" style="stroke:#000"></line>
+
+        <line x1="40" y1="0" x2="40" y2="400" style="stroke:#000"></line>
+        <line x1="80" y1="0" x2="80" y2="400" style="stroke:#000"></line>
+        <line x1="120" y1="0" x2="120" y2="400" style="stroke:#000"></line>
+        <line x1="160" y1="0" x2="160" y2="400" style="stroke:#000"></line>
+        <line x1="200" y1="0" x2="200" y2="400" style="stroke:#000"></line>
+        <line x1="240" y1="0" x2="240" y2="400" style="stroke:#000"></line>
+        <line x1="280" y1="0" x2="280" y2="400" style="stroke:#000"></line>
+        <line x1="320" y1="0" x2="320" y2="400" style="stroke:#000"></line>
+        <line x1="360" y1="0" x2="360" y2="400" style="stroke:#000"></line>
+
+        <linearGradient id="leftToRight">
+            <stop offset="0%" style="stop-color:#00dbb2"></stop>
+            <stop offset="20%" style="stop-color:#00dbb2"></stop>
+            <stop offset="20%" style="stop-color:#f8ca33"></stop>
+            <stop offset="100%" style="stop-color:#f8ca33"></stop>
+        </linearGradient>
+        <linearGradient id="topToBottom" xlink:href="#leftToRight" x1="0%" y1="0%" x2="0" y2="100%"></linearGradient>
+        <linearGradient id="rightToLeft" xlink:href="#leftToRight" x1="100%" y1="0%" x2="0" y2="0%"></linearGradient>
+        <linearGradient id="bottomToTop" xlink:href="#leftToRight" x1="0%" y1="100%" x2="0" y2="0%"></linearGradient>
+        <rect id="box" x="120" y="160" width="40" height="40" style="fill:url(#leftToRight);"></rect>
+
+    </svg>
+    <div>
+        <p>
+            <a id="go">⇈<span>前进</span></a>
+        </p>
+        <p>
+            <a id="turnLeft">↶<span>左转</span></a>
+            <a id="turnBack">⇓<span>转身</span></a>
+            <a id="turnRight">↷<span>右转</span></a>
+        </p>
+    </div>
+    <script>
+        function $(id) {
+            return document.getElementById(id);
+        }
+        function changeColor(o){
+            switch (o) {
+                case 0:
+                    $("box").setAttribute("style", "fill:url(#leftToRight)");
+                    break;
+                case 1:
+                    $("box").setAttribute("style", "fill:url(#topToBottom)");
+                    break;
+                case 2:
+                    $("box").setAttribute("style", "fill:url(#rightToLeft)");
+                    break;
+                case 3:
+                    $("box").setAttribute("style", "fill:url(#bottomToTop)");
+                    break;
+                default:
+                    break;
+            }
+        }
+        var flag = 0;
+        $("turnRight").onclick = function () {
+            flag++;
+            changeColor(flag % 4);
+        }
+        $("turnBack").onclick = function () {
+            flag += 2;
+            changeColor(flag % 4);
+        }
+        $("turnLeft").onclick = function () {
+            flag += 3;
+            changeColor(flag % 4);
+        }
+        $("go").onclick = function () {
+            var boxData = $("box").getBBox();
+            switch (flag % 4) {
+                case 0:
+                    $("box").setAttribute("x", boxData.x != 0 ? boxData.x - 40 : 0);
+                    break;
+                case 1:
+                    $("box").setAttribute("y", boxData.y != 0 ? boxData.y - 40 : 0);
+                    break;
+                case 2:
+                    $("box").setAttribute("x", boxData.x != 360 ? boxData.x + 40 : 360);
+                    break;
+                case 3:
+                    $("box").setAttribute("y", boxData.y != 360 ? boxData.y + 40 : 360);
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
