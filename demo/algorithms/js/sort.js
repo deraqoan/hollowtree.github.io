@@ -50,6 +50,20 @@ function* selectionSort() {
     }
     return "ending";
 }
+
+//插入排序
+function* insertionSort(){
+    var arr=data;
+    for(var i=1;i<arr.length;i++){
+        for(var j=i;j>0 && arr[j-1]>arr[j];j--){
+            swap(arr,j-1,j);
+            yield arr;
+            console.log(arr);
+        }
+    }
+    return "ending";
+}
+
 //可视化数据
 function showData(arr){
     var showBox = document.getElementById("showBox");
@@ -73,6 +87,9 @@ g("btns").onclick=function(event){
             break;
         case "selectionSort":
             var getData = selectionSort();
+            break;
+        case "insertionSort":
+            var getData = insertionSort();
             break;
     }
     timeH = setInterval(function(){
