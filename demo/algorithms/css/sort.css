@@ -13,7 +13,7 @@ fieldset, p{
     color:#e23e3e;
 }
 .show-box{
-    min-height:400px;
+    min-height:350px;
     display:flex;
     flex-direction:row;
     flex-wrap:nowrap;
@@ -24,7 +24,6 @@ fieldset, p{
 .small-box{
     border:1px solid black;
     margin:0 3px;
-
     width:10px;
     background-color:#ccc;
     font-size:10px;

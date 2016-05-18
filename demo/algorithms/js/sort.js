@@ -9,44 +9,44 @@ function buildData() {
         data[i] = Math.floor(Math.random() * 91 + 10);
     }
 }
-//Generator函数!!!
-//function* sortData(){
-//    var myArr=data;
-//    var flag=0;
-//    for(var j=0;j<myArr.length;j++){
-//        var a=0; 
-//        for(var i=0;i<myArr.length-flag;i++){
-                
-//            if(myArr[i]>myArr[i+1]){
-//                var temp=myArr[i];
-//                myArr[i]=myArr[i+1];
-//                myArr[i+1]=temp;
-//                //yield语句
-//                yield myArr;
-//                a++;
-//            }
-//        }
-//        if(a==0)break;
-//        flag++;
-//    }
-//    return "ending";
-//}
 
-function* sortData(){
+function swap(arr, index1, index2) {
+    var temp = arr[index1];
+    arr[index1] = arr[index2];
+    arr[index2] = temp;
+}
+
+//冒泡排序
+function* bubbleSort(){
     var myArr=data;
     for(var j=myArr.length-1;j>=0;j--){
         var flag=0;
         for(var i=0;i<j;i++){
             if(myArr[i]>myArr[i+1]){
-                var temp=myArr[i];
-                myArr[i]=myArr[i+1];
-                myArr[i+1]=temp;
+                swap(myArr,i,i+1);
                 //yield语句
                 yield myArr;
                 flag = 1;
             }
         }
         if(flag==0) break;
+    }
+    return "ending";
+}
+
+//选择排序
+function* selectionSort() {
+    var arr=data;
+    var min, temp;
+    for (var outer = 0; outer <= arr.length - 2; ++outer) {
+        min = outer;
+        for (var inner = outer + 1; inner <= arr.length - 1; ++inner) {
+            if (arr[inner] < arr[min]) {
+                min = inner;
+            }
+        }
+        swap(arr, outer, min);
+        yield arr;
     }
     return "ending";
 }
@@ -65,8 +65,16 @@ function showData(arr){
 }
 
 //排序可视化
-g("sortBtn").onclick=function(event){
-    var getData=sortData();
+g("btns").onclick=function(event){
+    var sort=event.target.className;
+    switch(sort){
+        case "bubbleSort":
+            var getData = bubbleSort();
+            break;
+        case "selectionSort":
+            var getData = selectionSort();
+            break;
+    }
     timeH = setInterval(function(){
         //getData.next()每调用一次, 其值都会改变, 故设一个临时变量存储其值
         var temp = getData.next().value;
