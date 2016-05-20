@@ -1,5 +1,4 @@
-﻿var arr = new Array();
-arr = [
+var menu = [
     ['单页面制作',
         //['demo/ife/task_1_01_1.html', 'HTML页面'],
         ['demo/ife/task_1_03_1.html', '三栏式布局'],
@@ -26,22 +25,22 @@ arr = [
         ['demo/ife/task_3_40_1.html', '日历组件Ⅰ'],
         ['demo/ife/task_3_41_1.html', '日历组件Ⅱ'],
         ['demo/ife/task_3_42_1.html', '日历组件Ⅲ']
-
-
         //['',''],
         //['#', '谷歌'],
     ]
 ];
 var list = "";
-for (var i = 0; i < arr.length; i++) {
-    for (var j = 0; j < arr[i].length; j++) {
+for (var i = 0; i < menu.length; i++) {
+    for (var j = 0; j < menu[i].length; j++) {
         if (j == 0) {
-            list += '<div class="myMenu"><dt class="fMenu">' + arr[i][0] + '</dt><div class="sMenu">';
+            list += '<div class="myMenu"><dt class="fMenu">' + menu[i][0] + '</dt><div class="sMenu">';
         } else {
-            list += '<dd><a href="' + arr[i][j][0] + '" target="_blank">' + j + ")  " + arr[i][j][1] + '</a></dd>';
+            list += '<dd><a href="' + menu[i][j][0] + '" target="_blank">' + j + ")  " + menu[i][j][1] + '</a></dd>';
         }
     }
     list += '</div></div>';
 }
 list = '<div class="menu"><dl>' + list + '</dl></div>';
-document.write(list);
+window.onload = function () {
+    document.body.innerHTML = list;
+}
