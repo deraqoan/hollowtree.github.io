@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <title>J18 | IFE JavaScript</title>
     <style type="text/css">
-        .clearfix:after{
+        /*.clearfix:after{
             content:" ";
             display:table;
             clear:both;
-        }
+        }*/
         .my-box{
             min-width:40px;
             height:40px;
@@ -63,11 +63,17 @@
             }
             btnThree.onclick = function leftDelDiv() {
                 var myBody = document.getElementsByClassName("big-box")[0];
-                myBody.removeChild(myBody.firstChild);
+                if (myBody.firstChild.innerText) {
+                    alert(myBody.firstChild.innerText);
+                    myBody.removeChild(myBody.firstChild);
+                }
             }
             btnFour.onclick = function rightDelDiv() {
                 var myBody = document.getElementsByClassName("big-box")[0];
-                myBody.removeChild(myBody.lastChild);
+                if (myBody.lastChild.innerText) {
+                    alert(myBody.lastChild.innerText);
+                    myBody.removeChild(myBody.lastChild);
+                }
             }
         }
     </script>
