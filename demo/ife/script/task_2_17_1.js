@@ -8,7 +8,9 @@ var aqiSourceData = {
   }
 };
 */
-
+function g(id) {
+    return document.getElementById(id);
+}
 // 以下两个函数用于随机模拟生成测试数据
 function getDateStr(dat) {
     var y = dat.getFullYear();
@@ -55,7 +57,8 @@ var pageState = {
  * 渲染图表
  */
 function renderChart() {
-
+    var myData = aqiSourceData["上海"];
+    for()
 }
 
 /**
