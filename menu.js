@@ -19,6 +19,7 @@ var menu = [
         ['demo/component/201/index.html', '绘制七巧板'],
         ['demo/ife/task_3_33_1.html', 'SVG 实践'],
         ['demo/ife/task_3_37_1.html', '浮出层'],
+        ['demo/component/111/index.html', '滚动条'],
         ['demo/ife/task_3_38_1.html', '排序表格'],
         ['demo/ife/task_3_39_1.html', '首行冻结的表格'],
         ['demo/algorithms/sort.html', '排序可视化'],
