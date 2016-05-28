@@ -71,6 +71,10 @@ body{
 .home-page:hover,.high-quality-shop:hover,.my-order:hover,.join-us:hover{
     background-color:#0c77d1;
 }
+.high-quality-shop{
+    background:url("image/hot.png") no-repeat;
+    background-position:90% 4px;
+}
 .top-bar{
     margin-left:20px;
 }
@@ -85,7 +89,7 @@ body{
 }
 .home-page{
     width:112px;
-    background-color:#0c77d1;
+    background-color:#006bc7;
 
 }
 .score-shop{
@@ -108,6 +112,7 @@ body{
 }
 .current-address{
     color: #999;
+    margin-right:5px;
 }
 .show-address a{
     text-decoration:none;
@@ -131,22 +136,23 @@ body{
 .search input{
     outline:none;
     border:none;
-    text-indent:1em;
+    text-indent:8px;
     font-family:inherit;
     font-size:14px;
-    width:250px;
+    width:236px;
     transition:width 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) .1s;
 }
 .search input:focus{
     width:300px;
 }
-/*ª√µ∆∆¨*/
+/*ÂπªÁÅØÁâá*/
 .slides{
     position:relative;
 }
 .show-box{
     overflow:hidden;
-}
+}
+
 .slides img{
     width:100%;
     max-width:100%;
@@ -154,7 +160,7 @@ body{
 .link-box{
     position:absolute;
     right:5px;
-    bottom:5px;
+    bottom:8px;
 }
 .link-box span{
     display:inline-block;
@@ -165,13 +171,14 @@ body{
     background-color:#fff;
     opacity:0.8;
     filter:alpha(opacity=80);
-    text-align:center;    cursor:pointer;
+    text-align:center;
+    cursor:pointer;
 }
 .link-box span:nth-child(1), .link-box span:hover{
     background-color:#f60;
     color:#fff;
 }
-/*…∏—°…Ãº“*/
+/*Á≠õÈÄâÂïÜÂÆ∂*/
 .choose-shop{
     width:100%;
     box-sizing:border-box;
@@ -192,6 +199,7 @@ body{
 }
 .take-food img{
     width:186px;
+    margin-right:-1px;
 }
 
 .classify-shop{
@@ -221,14 +229,14 @@ body{
     left:20px;
     color:#999;
 }
-.classify-shop .all-shop{
+.all-shop{
     background-color:#0089dc;
     color:#fff;
 }
-.classify-shop .all-shop:hover{
+.all-shop:hover{
     color:#666;
 }
-.classify-shop .big-shop{
+.big-shop{
     color:#f74342;
 }
 .sortbar{
@@ -283,7 +291,7 @@ body{
     color: #0089dc;
 }
 
-/*…Ãº“¡¥Ω”*/
+/*ÂïÜÂÆ∂ÈìæÊé•*/
 .shops{
     border: 1px solid #e6e6e6;
     margin-top: 20px;
@@ -429,12 +437,12 @@ body{
     top:0;
     right:0;
     bottom:0;
-    background-color:#333;
+    background-color:#504d53;
     z-index:3;
 }
 .sidebar-top{
     position:absolute;
-    top:30px;
+    top:120px;
 }
 .sidebar-bottom{
     position:absolute;
@@ -453,6 +461,36 @@ body{
 }
 .sidebar-shopcart{
     height:106px;
+}
+.sidebar a{
+    position:relative;
+}
+.sidebar a span{
+    padding:5px 10px;
+    position:absolute;
+    top:3px;
+    left:-82px;
+    border-radius:3px;
+    font-size:14px;
+    line-height:21px;
+    background-color:#726F77;
+    color:#fff;
+    display:none;
+}
+.sidebar a:hover span{
+    display:block;
+}
+.sidebar a span:after{
+    content:" ";
+    border:6px solid #726F77;
+    border-right:none;
+    border-top-color:transparent;
+    border-bottom-color:transparent;
+    position:absolute;
+    top:50%;
+    right:0;
+    margin-top:-6px;
+    margin-right:-6px;
 }
 /*footer*/
 .footer{

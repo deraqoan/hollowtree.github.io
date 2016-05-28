@@ -25,7 +25,7 @@
 .icon-dingdan:before { content: "\e622"; }
 .icon-bold-arrowup:before { content: "\e643"; }
 .icon-bold-arrowdown:before { content: "\e645"; }
-.icon-fadajing:before { content: "\e63a"; font-size: 16px; margin:0 10px;}
+.icon-fadajing:before { content: "\e63a"; font-size: 16px; margin:0 15px;}
 .icon-shouji:before { content: "\e62a"; }
 .icon-xingxing:before { content: "\e62e"; }
 .icon-renren:before { content: "\e758"; }
@@ -35,7 +35,7 @@
 .username:after{
     content: "\e645";
     padding: 3px;
-    margin-left: 10px;
+    margin: 0 3px 0 8px;
     font-size:14px;
     color: #d5efff;
     background-color: #449be5;
