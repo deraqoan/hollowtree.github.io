@@ -210,6 +210,7 @@ body{
     line-height:26px;
     vertical-align:middle;
     position:relative;
+    word-spacing:-6px;
 }
 .classify-shop a{
     display:inline-block;
@@ -218,8 +219,9 @@ body{
     margin:0 6px;
     width:56px;
     height:26px;
-    color: #666;
+    color:#666;
     border-radius: 3px;
+    word-spacing:0;
 }
 .classify-shop a:hover{
     background-color: #f6f6f6;
@@ -229,14 +231,14 @@ body{
     left:20px;
     color:#999;
 }
-.all-shop{
+.classify-shop .all-shop{
     background-color:#0089dc;
     color:#fff;
 }
-.all-shop:hover{
+.classify-shop .all-shop:hover{
     color:#666;
 }
-.big-shop{
+.classify-shop .big-shop{
     color:#f74342;
 }
 .sortbar{
@@ -565,12 +567,13 @@ body{
 .website-info a{
     color: #999;
     text-decoration:none;
+    line-height:19px;
 }
 .website-info a:hover{
     color: #000;
     text-decoration:underline;
 }
 .website-info img{
-    margin:7px 0;
+    margin:9px 0;
     height:30px;
 }
