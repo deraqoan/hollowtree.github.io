@@ -1,0 +1,13 @@
+.album{
+    width:100%;
+    min-height:300px;
+    border:1px solid red;
+}
+.panel{
+    width:200px;
+    height:150px;
+    border:1px solid blue;
+    position:fixed;
+    left:0;
+    bottom:0;
+}
