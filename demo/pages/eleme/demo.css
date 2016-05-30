@@ -77,6 +77,10 @@ body{
 }
 .top-bar{
     margin-left:20px;
+    float: left;
+}
+.top-bar ul li{
+    float: left;
 }
 .score-shop,.service-center,.mobile-app{
     width:106px;
