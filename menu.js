@@ -13,7 +13,7 @@ var menu = [
         ['demo/ife/task_1_11_1.html', '自适应移动Web页面'],
         ['demo/ife/task_1_06_1.html', '模拟报纸排版'],
         ['demo/ife/task_1_09_1.html', '一个复杂页面'],
-        ['demo/pages/eleme/index.html', '仿饿了么首页'],
+        ['demo/pages/eleme/index.html', '仿饿了么首页']
     ],
     ['网页小部件',
         ['demo/component/101/index.html', '简易电子时钟'],
@@ -27,9 +27,7 @@ var menu = [
         ['demo/ife/task_3_42_1.html', '日历组件Ⅲ'],
         ['demo/algorithms/sort.html', '排序可视化'],
         ['demo/component/111/index.html', '滚动条'],
-        ['demo/component/401/index.html', '幻灯片'],
-        //['',''],
-        //['#', '谷歌'],
+        ['demo/component/401/index.html', '幻灯片']
     ]
 ];
 var list = "";
