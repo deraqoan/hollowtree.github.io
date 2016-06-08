@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>drag</title>
+    <style>
+        body{margin:0;}
+        div{
+            width:100px;
+            height:100px;
+            background-color:#bdf;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" draggable="true"></div>
+    <script>
+        function $(id) { return document.getElementById(id); }
+        var data = {
+            x: 0,
+            y: 0
+        }
+        $("box").ondragstart = function (e) {
+            data.x = e.pageX - parseInt(e.target.style.marginLeft) || 0;
+            data.y = e.pageY - parseInt(e.target.style.marginTop) || 0;
+        }
+        //$("box").ondrag = function (e) {
+        //}
+        $("box").ondragend = function (e) {
+            e.target.style.marginLeft = e.pageX - data.x + "px";
+            e.target.style.marginTop = e.pageY - data.y + "px";
+        }
+    </script>
+</body>
+</html>
