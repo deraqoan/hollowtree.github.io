@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>初试localStorage</title>
+    </head>
+    <body>
+        <script>
+            //删除数据
+            //localStorage.removeItem("userName");
+            //localStorage.userName = null;
+            localStorage.clear();
+
+            //设置数据
+            //localStorage.setItem("userName", "Tom");
+            //localStorage.userName = "Tom";
+
+            //获取数据
+            //var name = localStorage.getItem("username");
+            //var name = localStorage.userName;
+
+            //数字会被转换为字符串
+            localStorage.age = 23;
+            console.log("age : " + localStorage.age + "; type: " + typeof (localStorage.age));
+
+            //存储对象
+            var tom = {
+                firstName: "Li",
+                lastName: "er",
+                age:42
+            };
+
+            localStorage.errorPerson = tom;
+            console.log("errorPerson : " + localStorage.errorPerson + "; type: " + typeof (localStorage.errorPerson));
+
+            localStorage.person = JSON.stringify(tom);
+            console.log("anotherErrorPerson : " + localStorage.person + "; type: " + typeof (localStorage.person));
+
+            var hu = localStorage.person;
+            console.log("person : " + JSON.parse(hu) + "; type: " + typeof (localStorage.person));
+            console.log("tomAge: " + JSON.parse(hu).age);
+            console.log("");
+
+            //存储数组
+            var arr = [1, 2, 3, 5];
+
+            localStorage.arr1 = arr;
+            var getArr1 = localStorage.arr1;
+            console.log("arr1: " + getArr1);
+
+            localStorage.arr2 = JSON.stringify(arr);
+            var getArr2 = localStorage.arr2;
+            console.log("arr2: " + getArr2);
+
+        </script>
+    </body>
+</html>
