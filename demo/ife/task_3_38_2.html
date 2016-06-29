@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>R38 | 排序表格 - Angularjs重制</title>
+    <link rel="stylesheet" type="text/css" href="style/reset.css">
+    <link rel="stylesheet" type="text/css" href="style/task_3_38_1.css">
+</head>
+
+<body>
+    <div>
+        <table ng-app="myApp" ng-controller="sortTable">
+            <tr>
+                <th>姓名</th>
+                <th ng-click="orderByMe('chinese')">语文</th>
+                <th ng-click="orderByMe('math')">数学</th>
+                <th ng-click="orderByMe('english')">英语</th>
+                <th ng-click="orderByMe('count')">总分</th>
+            </tr>
+            <tr ng-repeat="x in names|orderBy:myOrderBy:reverse">
+                <!--<td>{{$index+1}}</td>-->
+                <td>{{x.name}}</td>
+                <td>{{x.chinese}}</td>
+                <td>{{x.math}}</td>
+                <td>{{x.english}}</td>
+                <td>{{x.count}}</td>
+            </tr>
+        </table>
+    </div>
+    <script src="http://cdn.bootcss.com/angular.js/1.5.7/angular.js"></script>
+    <script src="script/task_3_38_2.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>
+
+</html>
