@@ -1,0 +1,17 @@
+.page-content.page-welcome(ng-controller="welcomeController")
+    table
+        thead
+            tr
+                th 标题
+                th 时间
+                th 状态
+                th 操作
+        tbody
+            tr(ng-repeat='item in data')
+                td {{item.title}}
+                td {{item.time | date:'yyyy-MM-dd HH:mm:ss'}}
+                td {{item.status}}
+                td
+                    a 编辑
+                    a 删除
+                    a 查看数据
