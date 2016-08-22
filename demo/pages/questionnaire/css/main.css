@@ -1,0 +1,20 @@
+html {
+  font-family: 'Microsoft YaHei';
+  background: #f2f2f2;
+}
+html .clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+html .header {
+  background: #ffa500;
+  width: 100%;
+  line-height: 40px;
+  box-sizing: border-box;
+  padding-left: 20%;
+}
+html .header li {
+  float: left;
+  margin: 0 20px;
+}
