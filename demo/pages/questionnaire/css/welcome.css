@@ -1,0 +1,33 @@
+.page-welcome table {
+  width: 80%;
+  margin: 80px auto 0;
+  background: #fff;
+}
+.page-welcome table tr {
+  text-align: center;
+}
+.page-welcome table tr th {
+  line-height: 40px;
+}
+.page-welcome table tr th:nth-child(1) {
+  width: 30%;
+}
+.page-welcome table tr th:nth-child(2) {
+  width: 30%;
+}
+.page-welcome table tr th:nth-child(3) {
+  width: 10%;
+}
+.page-welcome table tr th:nth-child(4) {
+  width: 30%;
+}
+.page-welcome table tr td {
+  line-height: 34px;
+}
+.page-welcome table tr td a {
+  display: inline-block;
+  line-height: 1;
+  margin: 5px 10px;
+  border: 1px solid #666;
+  padding: 1px 3px;
+}
