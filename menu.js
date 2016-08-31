@@ -16,13 +16,14 @@ var menu = [
         ['demo/pages/eleme/index.html', '仿饿了么首页']
     ],
     ['网页小部件',
+        //
         ['demo/component/101/index.html', '简易电子时钟'],
         ['demo/component/201/index.html', '绘制七巧板'],
         ['demo/ife/task_3_33_1.html', 'SVG 实践'],
         ['demo/ife/task_3_37_1.html', '浮出层'],
         ['demo/ife/task_3_38_1.html', '排序表格'],
         ['demo/ife/task_3_39_1.html', '首行冻结的表格'],
-        ['demo/ife/task_3_40_1.html', '日历组件Ⅰ'],
+        ['components/calendar/demo.html', '日历组件Ⅰ'],
         ['demo/ife/task_3_41_1.html', '日历组件Ⅱ'],
         ['demo/ife/task_3_42_1.html', '日历组件Ⅲ'],
         ['demo/algorithms/sort.html', '排序可视化'],
@@ -42,6 +43,6 @@ for (var i = 0; i < menu.length; i++) {
     list += '</div></div>';
 }
 list = '<div class="menu"><dl>' + list + '</dl></div>';
-window.onload = function () {
+window.onload = function() {
     document.body.innerHTML = list;
 }
