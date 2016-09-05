@@ -1,0 +1,78 @@
+html {
+    font-family: 'Microsoft YaHei';
+    font-size: calc(1em + 1vw);
+    width: 100%;
+    max-width: 360px;
+}
+
+.calculator {
+    position: relative;
+}
+
+.menu {
+    height: 6%;
+}
+
+.text {
+    height: 24%;
+}
+
+.text p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.text .express {
+    height: 40%;
+    font-size: 1.5rem;
+    /*line-height: 30px;*/
+}
+
+.text .result {
+    font-size: 2rem;
+    height: 60%;
+}
+
+.keyboard {
+    height: 70%;
+}
+
+.key {
+    display: inline-flex;
+    /* 水平居中 */
+    justify-content: center;
+    /* 垂直居中 */
+    align-items: center;
+    float: left;
+    width: 25%;
+    height: 20%;
+    border: 1px solid #dbdbdb;
+    border-width: 1px 1px 0 0;
+    box-sizing: border-box;
+}
+
+#history {
+    z-index: 2;
+    position: absolute;
+    top: 6%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    display: none;
+    overflow: auto;
+}
+
+#history p {
+    padding-left:10px;
+    padding-right: 10px;
+}
+
+.historyResult {
+    text-align: right;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dbdbdb;
+}
