@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>spider</title>
+</head>
+
+<body>
+    <div id="info"></div>
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+    <script>
+        $.getJSON('cnodejs.json', function(data) {
+            console.log(data);
+            var html = "";
+
+            for (var i = 0, temp = data.all.length; i < temp; i++) {
+                // html += "<p>" +  + "</p>";
+                html += "<p>爬取时间：" + data.all[i].date + "</p>";
+                html += "<p>爬取地址：" + "<a href=" + data.all[i].pageurl + ">" + data.all[i].pageurl + "</a></p>";
+                data.all[i].pagedata.forEach(function(item, index) {
+                    index++;
+                    if (index < 10) {
+                        index = "0" + index
+                    }
+                    html += "<p>" + index + ". [" + (item.mark || "----") + "] " + item.author + ": <a href=" + item.url + ">" + item.title + "</a></p>";
+                })
+            }
+            // html += "<p>爬取时间：" + data.date + "</p>";
+            // html += "<p>爬取地址：" + data.url + "</p>";
+
+            // data.data.forEach(function(item, index) {
+            //     html += "<p>" + (index + 1) + ". " + item.title + "</p>";
+            // })
+            $('#info').html(html);
+        })
+    </script>
+</body>
+
+</html>
