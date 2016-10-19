@@ -29,7 +29,8 @@ var menu = [
         ['demo/algorithms/sort.html', '排序可视化'],
         ['demo/component/111/index.html', '滚动条'],
         ['demo/component/401/index.html', '幻灯片']
-    ]
+    ],
+    ['Node 相关', ['http://demo.smalltree.me:4000/', '留言板']]
 ];
 var list = "";
 for (var i = 0; i < menu.length; i++) {
