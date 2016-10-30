@@ -30,7 +30,7 @@ var menu = [
         ['demo/component/111/index.html', '滚动条'],
         ['demo/component/401/index.html', '幻灯片']
     ],
-    ['Node 相关', ['http://demo.smalltree.me:4000/', '一个博客']]
+    ['Node 相关', ['https://github.com/hollowtree/koa-blog', '一个博客']]
 ];
 var list = "";
 for (var i = 0; i < menu.length; i++) {
