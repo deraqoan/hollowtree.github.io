@@ -48,6 +48,7 @@ $("talkShow").onmouseup = function (e) {
 
 //滚动鼠标滚轮时使对话内容上下滚动
 function scroll(e) {
+    e.preventDefault();
     e = EventUtil.getEvent(e);
     var delta = EventUtil.getWheelDelta(e);
     console.log(delta);
