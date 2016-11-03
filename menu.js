@@ -5,7 +5,7 @@ var menu = [
         ['demo/ife/task_1_04_1.html', '定位及居中'],
         ['demo/ife/task_1_08_1.html', '响应式网格布局'],
         ['demo/ife/task_1_10_1.html', 'Flexbox布局'],
-        ['demo/ife/task_1_12_1.html', '一些CSS3新特性'],
+        // ['demo/ife/task_1_12_1.html', '一些CSS3新特性'],
         ['demo/component/301/svg.html', 'SVG 初试'],
         // ['demo/ife/task_1_02_1.html', 'HTML+CSS页面Ⅰ'],
         // ['demo/ife/task_1_05_1.html', 'HTML+CSS页面Ⅱ'],
@@ -13,7 +13,8 @@ var menu = [
         ['demo/ife/task_1_11_1.html', '自适应移动Web页面'],
         ['demo/ife/task_1_06_1.html', '模拟报纸排版'],
         ['demo/ife/task_1_09_1.html', '一个复杂页面'],
-        ['demo/pages/eleme/index.html', '仿饿了么首页']
+        ['demo/pages/eleme/index.html', '仿饿了么首页'],
+        ['components/somecss3/app/index.html','Try CSS3']
     ],
     ['网页小部件',
         //

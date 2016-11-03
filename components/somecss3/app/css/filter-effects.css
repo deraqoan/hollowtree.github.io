@@ -1,0 +1,80 @@
+body {
+    color: #333;
+}
+svg{
+    height: 0;
+}
+section {
+    width: 70%;
+    margin: 16px auto;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+.demo{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.demo dt{
+    width:40em;
+}
+.demo dd{
+    margin-left: 5px;
+}
+.demo div{
+    width: 200px;
+   height:100px;
+    margin: 10px;
+    font-size:30px;
+    position: relative;
+}
+.demo div:after{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../img/img2.jpg);
+    z-index: -1;
+}
+.demo .box2:after{
+    filter: url(#Turb);
+}
+.demo .box3:after{
+    filter: blur(3px);
+}
+.demo .box4:after{
+    filter: brightness(20%);
+}
+.demo .box5:after{
+    filter: contrast(20%);
+}
+.demo .box6:after{
+    filter: drop-shadow(0 3px 10px black);
+}
+.demo .box7:after{
+    filter:grayscale(80%);
+}
+.demo .box8:after{
+    filter:hue-rotate(30deg);
+}
+.demo .box9:after{
+    filter:invert(80%);
+}
+.demo .box10:after{
+    filter:opacity(50%);
+}
+.demo .box11:after{
+    filter:saturate(40%);
+}
+.demo .box12:after{
+    filter:sepia(100%);
+}
+.demo .box13:after{
+    filter:sepia(100%) saturate(10) hue-rotate(120deg);
+}
+.demo .box14:after{
+    filter:grayscale(100%) sepia(100%) contrast(80%) hue-rotate(150deg);
+}

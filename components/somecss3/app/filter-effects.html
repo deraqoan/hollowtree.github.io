@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>filter-effects</title>
+    <meta name="description" content="filter-effects exercise - hollowtree">
+    <link rel="stylesheet" href="css/filter-effects.css">
+</head>
+
+<body>
+    <svg>
+        <filter id="Turb" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence type="turbulence" baseFrequency="0.1" numOctaves="2"/>
+        </filter>
+    </svg>
+    <section>
+        <p>Filter Effects Modules: <a href="https://www.w3.org/TR/filter-effects" target="_blank">https://www.w3.org/TR/filter-effects</a></p>
+        <p>HSL 为 色相(Hue)，饱和度(Saturation)，亮度(Lightness)</p>
+        <p>HSB 为 色相，饱和度，明度(Brightness)</p>
+    </section>
+    <section class="demo">
+        <dl>
+            <dt>原图</dt>
+            <dd>
+                <div class="box1"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>url</dt>
+            <dd>
+                <div class="box2"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>blur （模糊）</dt>
+            <dd>
+                <div class="box3"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>brightness （明度）</dt>
+            <dd>
+                <div class="box4"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>contrast （对比度）</dt>
+            <dd>
+                <div class="box5"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>drop-shadow</dt>
+            <dd>
+                <div class="box6"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>grayscale （灰度）</dt>
+            <dd>
+                <div class="box7"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>hue-rotate （色相偏移）</dt>
+            <dd></dd>
+            <dd>
+                <div class="box8"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>invert （反色）</dt>
+            <dd>
+                <div class="box9"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>opacity （透明）</dt>
+            <dd>
+                <div class="box10"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>saturate（饱和度/纯度）</dt>
+            <dd>
+                <div class="box11"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>sepia （橙黄色染色效果）</dt>
+            <dd>
+                <div class="box12"></div>
+            </dd>
+        </dl>
+    </section>
+    <section class="demo">
+        <dl>
+            <dt>sepia(100%) saturate(10) hue-rotate(80deg)</dt>
+            <dd>
+                <div class="box13"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>grayscale(100%) sepia(100%) contrast(80%) hue-rotate(150deg)</dt>
+            <dd>
+                <div class="box14"></div>
+            </dd>
+        </dl>
+    </section>
+</body>
+
+</html>
