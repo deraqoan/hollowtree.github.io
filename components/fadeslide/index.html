@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>渐显渐隐轮播图</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <p>封装的函数名为<code>slide</code>，参数为<code>id</code>/<code>showTime</code>/<code>fadeTime</code>，其中参数<code>id</code>为轮播图的id，可选参数<code>showTime</code>为每帧图片的展示时间（默认为2000ms），可选参数<code>fadeTime</code>为帧与帧之间的过渡时间（默认为400ms）。</p>
+        <div class="slider" id="slideBox">
+            <div class="slider-pages">
+                <div class="slider-page">
+                    <img src="./img/1.jpg" alt="hong kong">
+                </div>
+                <div class="slider-page">
+                    <img src="./img/2.jpg" alt="Khao Phing Kan">
+                </div>
+                <div class="slider-page">
+                    <img src="./img/3.jpg" alt="iceland">
+                </div>
+                <div class="slider-page">
+                    <img src="./img/4.jpg" alt="red fox">
+                </div>
+                <div data-slide-to="prev" class="slider-prev"></div>
+                <div data-slide-to="next" class="slider-next"></div>
+            </div>
+            <div class="slider-links">
+                <div data-slide-to="0" class="slider-link"></div>
+                <div data-slide-to="1" class="slider-link"></div>
+                <div data-slide-to="2" class="slider-link"></div>
+                <div data-slide-to="3" class="slider-link"></div>
+            </div>
+        </div>
+    <script src="js/main.js"></script>
+    <script>
+        slide('slideBox');
+    </script>
+    </body>
+</html>
