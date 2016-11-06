@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>css3 - filter</title>
+    <meta name="description" content="css3 filter app build with vue by hollowtree">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div id="demo">
+        <div>
+            <div class="show-box">
+                <div>
+                    <div v-bind:style="{filter:temp}" class="show-content"></div>
+                </div>
+            </div>
+            <section>
+                <p v-if="temp">属性值：<code>{{temp}}</code></p>
+                <p>说明：这个页面可以合成 filter 的属性值</p>
+                <p>1. 点击第一行按钮添加滤镜</p>
+                <p>2. 拉动滑块调整相应的值</p>
+                <p>3. 点击确定（现在就点击一下吧）</p>
+                <p>Have fun! </p>
+            </section>
+        </div>
+        <form>
+            <p class="btns-add">
+                <button class="btn-pri" v-for="info in infos" v-on:click.prevent="addOption(info)">{{info.label.zh}}</button>
+            </p>
+            <p class="ranges" v-for="filterData in filterDatas">
+                <label>{{filterData.label.zh}}：<input type="range" v-bind:min="filterData.start" v-bind:max="filterData.end" v-model="filterData.value" /></label>
+                <span>{{filterData.value}}</span>
+                <button class="btn-del" v-on:click.prevent="remove(filterData)">DEL</button>
+            </p>
+            <p class="sure-or-not">
+                <button class="btn-del" v-on:click.prevent="removeAll">清空</button>
+                <button class="btn-pri" v-on:click.prevent="OK">确定</button>
+            </p>
+        </form>
+    </div>
+    <script src="http://cdn.bootcss.com/vue/2.0.3/vue.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
