@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>居中</title>
+    <meta name="description" content="made by hollowtree">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <section>
+        <h2>One<small>固定宽度、高度</small></h2>
+        <div class="demo box1">
+            <div class="sub-box1"></div>
+        </div>
+<div><pre><code>
+.box1{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.sub-box1{
+    width:200px;
+    height: 100px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+</code></pre></div>
+</section>
+
+<section>
+<h2>Two<small>One的简写</small></h2>
+<div class="demo box2">
+    <div class="sub-box2"></div>
+</div>
+<div><pre><code>
+.box2{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.sub-box2{
+    width:200px;
+    height: 100px;
+    position: absolute;
+    top:calc(50% - 50px);
+    left: calc(50% - 100px);
+}
+</code></pre></div>
+</section>
+
+<section>
+<h2>Three<small>不定宽度、高度</small></h2>
+<div class="demo box3">
+    <div class="sub-box3"></div>
+</div>
+<div><pre><code>
+.box3{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.sub-box3{
+    width:50%;
+    height: 50%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</code></pre></div>
+</section>
+
+<section>
+<h2>Four<small>不定宽度、高度 - vm/vh</small></h2>
+<div class="demo">
+    <p>DEMO: <a href="./demo4.html" target="_blank">Link</a></p>
+</div>
+<div><pre><code>
+.sub-box4{
+    width: 50vw;
+    height: 50vh;
+    margin: 50vh auto 0;
+    transform: translateY(-50%);
+}
+</code></pre></div>
+</section>
+
+<section>
+<h2>Five<small>不定宽度、高度 - flex</small></h2>
+<div class="demo box5">
+    <div class="sub-box5"></div>
+</div>
+<div><pre><code>
+.box5{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-box5{
+    width:50%;
+    height: 50%;
+}
+</code></pre></div>
+</section>
+</body>
+
+</html>
